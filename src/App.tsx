@@ -40,7 +40,7 @@ function App() {
           backgroundColor: 'white'
         }}>
           <p onClick={handleFooterClick} style={{ cursor: 'pointer', userSelect: 'none' }}>
-            © {new Date().getFullYear()} ETF Momentum Rankings. Engineered by Heekeun Lee x Deepmind AI (v1.1)
+            © {new Date().getFullYear()} ETF Momentum Rankings. Engineered by Heekeun Lee x Deepmind AI (v1.2)
           </p>
         </footer>
         <AdminModal
