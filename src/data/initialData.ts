@@ -15,7 +15,17 @@ export const initialData: RankingReport = {
                 { rank: 7, name: "SOL 반도체소부장Fn", yield1W: "+25.4%", yield1M: "+30.1%", yield3M: "+80.5%", yield6M: "+90.2%" },
                 { rank: 8, name: "RISE 2차전지TOP10", yield1W: "+24.9%", yield1M: "+38.5%", yield3M: "+95.2%", yield6M: "+135.4%" },
                 { rank: 9, name: "TIGER 반도체 TOP10", yield1W: "+22.1%", yield1M: "+29.5%", yield3M: "+105.1%", yield6M: "+140.8%" },
-                { rank: 10, name: "HANARO 글로벌금채굴기업", yield1W: "+19.8%", yield1M: "+54.2%", yield3M: "+115.3%", yield6M: "+198.5%" }
+                { rank: 10, name: "HANARO 글로벌금채굴기업", yield1W: "+19.8%", yield1M: "+54.2%", yield3M: "+115.3%", yield6M: "+198.5%" },
+                { rank: 11, name: "TIGER 2차전지소재Fn", yield1W: "+18.5%", yield1M: "+35.2%", yield3M: "+92.1%", yield6M: "+128.4%" },
+                { rank: 12, name: "KODEX 바이오", yield1W: "+15.2%", yield1M: "+12.5%", yield3M: "+45.3%", yield6M: "+60.2%" },
+                { rank: 13, name: "TIGER KRX반도체", yield1W: "+14.8%", yield1M: "+25.4%", yield3M: "+98.5%", yield6M: "+135.2%" },
+                { rank: 14, name: "SOL 2차전지소부장Fn", yield1W: "+14.2%", yield1M: "+33.1%", yield3M: "+88.4%", yield6M: "+115.7%" },
+                { rank: 15, name: "RISE 헬스케어", yield1W: "+13.5%", yield1M: "+10.2%", yield3M: "+30.5%", yield6M: "+45.1%" },
+                { rank: 16, name: "TIGER 게임TOP10", yield1W: "+12.1%", yield1M: "+8.5%", yield3M: "+15.2%", yield6M: "+22.8%" },
+                { rank: 17, name: "KODEX 미디어&엔터", yield1W: "+10.5%", yield1M: "+7.2%", yield3M: "+12.4%", yield6M: "+18.5%" },
+                { rank: 18, name: "HANARO FnK-푸드", yield1W: "+9.8%", yield1M: "+15.4%", yield3M: "+42.1%", yield6M: "+85.2%" },
+                { rank: 19, name: "TIGER 화장품", yield1W: "+8.5%", yield1M: "+14.2%", yield3M: "+38.5%", yield6M: "+72.1%" },
+                { rank: 20, name: "SOL 의료기기소부장Fn", yield1W: "+8.1%", yield1M: "+9.5%", yield3M: "+25.1%", yield6M: "+40.5%" }
             ]
         },
         {
