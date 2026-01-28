@@ -1,87 +1,85 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { initialData } from '../data/initialData';
 import type { RankingReport } from '../types';
-import { Trophy } from 'lucide-react';
+import { Trophy, Calendar } from 'lucide-react';
+import { VisitorCounter } from '../components/VisitorCounter';
 
 export const Home: React.FC = () => {
-    const [data, setData] = useState<RankingReport>(initialData);
+    const [data] = useState<RankingReport>(initialData);
 
-    useEffect(() => {
-        const saved = localStorage.getItem('etf_data');
-        if (saved) {
-            try {
-                setData(JSON.parse(saved));
-            } catch (e) {
-                console.error("Failed to parse saved data", e);
-            }
-        }
-    }, []);
-
-    const getColor = (val: string) => {
-        if (val.includes('+')) return 'var(--color-up)';
-        if (val.includes('-')) return 'var(--color-down)';
-        return 'inherit';
+    const checkTrend = (val: string) => {
+        if (!val) return 'neutral';
+        if (val.includes('+')) return 'up';
+        if (val.includes('-')) return 'down';
+        return 'neutral';
     };
 
     return (
-        <div className="container" style={{ paddingBottom: '4rem' }}>
-            <div style={{ margin: '2rem 0', textAlign: 'center' }}>
-                <h1 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                    <Trophy size={32} color="var(--color-primary)" />
-                    ETF Momentum Rankings
-                </h1>
-                <p style={{ color: 'var(--color-text-muted)' }}>Updated: {data.date}</p>
+        <div className="container" style={{ paddingBottom: '4rem', maxWidth: '1000px' }}>
+            <div className="header-section">
+                <div>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1E293B' }}>
+                        ETF 종목별 수익률 랭킹 <br />
+                        <span style={{ fontSize: '1rem', fontWeight: 500, color: '#64748B' }}>(주간, 1개월, 3개월, 6개월)</span>
+                    </h2>
+
+                </div>
+                <div className="last-updated" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.25rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Calendar size={16} />
+                        <span>Last Updated: {data.date}</span>
+                    </div>
+                    <VisitorCounter />
+                </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+            <div className="flex flex-col gap-4">
                 {data.categories.map((cat, idx) => (
-                    <div key={idx} className="bg-white shadow-md rounded-lg p-4">
-                        <h2 style={{
-                            fontSize: '1.25rem',
-                            fontWeight: 600,
-                            marginBottom: '1rem',
-                            paddingBottom: '0.5rem',
-                            borderBottom: '2px solid var(--color-primary)',
-                            display: 'inline-block'
-                        }}>
-                            {cat.categoryName}
-                        </h2>
-                        <div style={{ overflowX: 'auto' }}>
+                    <div key={idx} className="card">
+                        <div className="card-header">
+                            <div className="indicator"></div>
+                            <h3>{cat.categoryName}</h3>
+                        </div>
+
+                        <div className="table-container">
                             <table className="data-table">
                                 <thead>
                                     <tr>
-                                        <th style={{ width: '60px' }}>Rank</th>
-                                        <th>Item Name</th>
-                                        <th>1 Week</th>
-                                        <th>1 Month</th>
-                                        <th>3 Month</th>
-                                        <th>6 Month</th>
+                                        <th className="th-rank">Rank</th>
+                                        <th className="th-name">ETF Name</th>
+                                        <th className="th-data">1 Week</th>
+                                        <th className="th-data">1 Month</th>
+                                        <th className="th-data">3 Month</th>
+                                        <th className="th-data">6 Month</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {cat.items.map((item) => (
-                                        <tr key={item.rank}>
-                                            <td>
-                                                <div style={{
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    width: '24px',
-                                                    height: '24px',
-                                                    borderRadius: '50%',
-                                                    backgroundColor: item.rank <= 3 ? '#FEF3C7' : '#F1F5F9',
-                                                    color: item.rank <= 3 ? '#D97706' : '#64748B',
-                                                    fontWeight: 'bold',
-                                                    fontSize: '0.75rem'
-                                                }}>
+                                    {cat.items.map((item, i) => (
+                                        <tr key={i}>
+                                            <td className="td-rank">
+                                                <div className={`rank-badge ${item.rank <= 3 ? 'top-rank' : ''}`}>
                                                     {item.rank}
                                                 </div>
                                             </td>
-                                            <td style={{ fontWeight: 500 }}>{item.name}</td>
-                                            <td style={{ color: getColor(item.yield1W), fontWeight: 500 }}>{item.yield1W}</td>
-                                            <td style={{ color: getColor(item.yield1M), fontWeight: 500 }}>{item.yield1M}</td>
-                                            <td style={{ color: getColor(item.yield3M), fontWeight: 500 }}>{item.yield3M}</td>
-                                            <td style={{ color: getColor(item.yield6M), fontWeight: 500 }}>{item.yield6M}</td>
+                                            <td className="td-name">
+                                                {item.name}
+                                                {item.rank === 1 && <Trophy size={14} className="trophy-icon" />}
+                                            </td>
+                                            {['yield1W', 'yield1M', 'yield3M', 'yield6M'].map((key) => {
+                                                const val = item[key as keyof typeof item] as string;
+                                                const trend = checkTrend(val);
+                                                const labelMap: Record<string, string> = {
+                                                    yield1W: '1 Week',
+                                                    yield1M: '1 Month',
+                                                    yield3M: '3 Month',
+                                                    yield6M: '6 Month'
+                                                };
+                                                return (
+                                                    <td key={key} className={`td-data text-${trend}`} data-label={labelMap[key]}>
+                                                        {val || '-'}
+                                                    </td>
+                                                );
+                                            })}
                                         </tr>
                                     ))}
                                 </tbody>
@@ -90,6 +88,7 @@ export const Home: React.FC = () => {
                     </div>
                 ))}
             </div>
-        </div >
+
+        </div>
     );
 };
