@@ -13,6 +13,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose, todaysR
     const [pin, setPin] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [error, setError] = useState('');
+    const [isGenerating, setIsGenerating] = useState(false);
 
     if (!isOpen) return null;
 
@@ -27,8 +28,16 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose, todaysR
         }
     };
 
-    const handleDownload = () => {
-        generateDailyReport(todaysRankings);
+    const handleDownload = async () => {
+        setIsGenerating(true);
+        try {
+            await generateDailyReport(todaysRankings);
+        } catch (error) {
+            console.error(error);
+            alert('Failed to generate PDF');
+        } finally {
+            setIsGenerating(false);
+        }
     };
 
     return (
@@ -113,6 +122,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose, todaysR
 
                             <button
                                 onClick={handleDownload}
+                                disabled={isGenerating}
                                 style={{
                                     width: '100%',
                                     display: 'flex',
@@ -120,16 +130,17 @@ export const AdminModal: React.FC<AdminModalProps> = ({ isOpen, onClose, todaysR
                                     justifyContent: 'center',
                                     gap: '0.5rem',
                                     padding: '1rem',
-                                    backgroundColor: '#2563EB',
+                                    backgroundColor: isGenerating ? '#94A3B8' : '#2563EB',
                                     color: 'white',
                                     borderRadius: '0.75rem',
                                     fontWeight: 700,
                                     fontSize: '1rem',
-                                    boxShadow: '0 4px 6px -1px rgba(37, 99, 235, 0.3)'
+                                    boxShadow: '0 4px 6px -1px rgba(37, 99, 235, 0.3)',
+                                    cursor: isGenerating ? 'not-allowed' : 'pointer'
                                 }}
                             >
                                 <Download size={20} />
-                                Download PDF Report
+                                {isGenerating ? 'Generating PDF...' : 'Download PDF Report'}
                             </button>
                         </div>
                     )}

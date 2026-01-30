@@ -6,12 +6,18 @@ import { AIAnalysisModal } from './AIAnalysisModal';
 import { AIBuySellModal } from './AIBuySellModal';
 import { AITerminologyModal } from './AITerminologyModal';
 import { AIQuizModal } from './AIQuizModal';
+import { FortuneModal } from './FortuneModal';
+import { BalanceGameModal } from './BalanceGameModal';
+import { FomoCalculatorModal } from './FomoCalculatorModal';
 
 export const Header: React.FC = () => {
     const [isAIModalOpen, setIsAIModalOpen] = useState(false);
     const [isBuySellModalOpen, setIsBuySellModalOpen] = useState(false);
     const [isTerminologyModalOpen, setIsTerminologyModalOpen] = useState(false);
     const [isQuizModalOpen, setIsQuizModalOpen] = useState(false);
+    const [isFortuneModalOpen, setIsFortuneModalOpen] = useState(false);
+    const [isBalanceGameModalOpen, setIsBalanceGameModalOpen] = useState(false);
+    const [isFomoModalOpen, setIsFomoModalOpen] = useState(false);
 
     const handleConfetti = useCallback(() => {
         const scalar = 2;
@@ -146,6 +152,69 @@ export const Header: React.FC = () => {
                         <BrainCircuit size={12} />
                         경제 퀴즈
                     </button>
+
+                    <button
+                        onClick={() => setIsFortuneModalOpen(true)}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
+                            padding: '0.25rem 0.5rem',
+                            backgroundColor: '#FEF9C3', // Light Yellow
+                            border: '1px solid #FDE047',
+                            borderRadius: '0.25rem',
+                            color: '#854D0E', // Dark Yellow/Brown
+                            fontSize: '0.7rem',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <span>💰</span>
+                        오늘의 투자운세
+                    </button>
+
+                    <button
+                        onClick={() => setIsBalanceGameModalOpen(true)}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
+                            padding: '0.25rem 0.5rem',
+                            backgroundColor: '#F3E8FF', // Light Purple
+                            border: '1px solid #D8B4FE',
+                            borderRadius: '0.25rem',
+                            color: '#6B21A8',
+                            fontSize: '0.7rem',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <span>⚖️</span>
+                        투자 밸런스 게임
+                    </button>
+
+                    <button
+                        onClick={() => setIsFomoModalOpen(true)}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
+                            padding: '0.25rem 0.5rem',
+                            backgroundColor: '#FEE2E2', // Light Red
+                            border: '1px solid #FCA5A5',
+                            borderRadius: '0.25rem',
+                            color: '#991B1B',
+                            fontSize: '0.7rem',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <span>💊</span>
+                        FOMO 치료기
+                    </button>
                 </div>
             </div>
 
@@ -153,6 +222,9 @@ export const Header: React.FC = () => {
             <AIBuySellModal isOpen={isBuySellModalOpen} onClose={() => setIsBuySellModalOpen(false)} />
             <AITerminologyModal isOpen={isTerminologyModalOpen} onClose={() => setIsTerminologyModalOpen(false)} />
             <AIQuizModal isOpen={isQuizModalOpen} onClose={() => setIsQuizModalOpen(false)} />
+            <FortuneModal isOpen={isFortuneModalOpen} onClose={() => setIsFortuneModalOpen(false)} />
+            <BalanceGameModal isOpen={isBalanceGameModalOpen} onClose={() => setIsBalanceGameModalOpen(false)} />
+            <FomoCalculatorModal isOpen={isFomoModalOpen} onClose={() => setIsFomoModalOpen(false)} />
 
             <div className="container" style={{ height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>

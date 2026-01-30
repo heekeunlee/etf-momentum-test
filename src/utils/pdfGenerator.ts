@@ -2,9 +2,37 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { marketAnalysisData, etfBuySellData } from '../data/reportData';
 
-export const generateDailyReport = (todaysRankings: any[]) => {
+export const generateDailyReport = async (todaysRankings: any[]) => {
     const doc = new jsPDF();
     const today = new Date().toISOString().split('T')[0];
+
+    // Load Korean Font (NotoSansKR)
+    try {
+        const fontUrl = `${import.meta.env.BASE_URL}fonts/NotoSansKR-Regular.ttf`;
+        const response = await fetch(fontUrl);
+
+        if (!response.ok) {
+            throw new Error(`Failed to fetch font from ${fontUrl}`);
+        }
+
+        const fontBuffer = await response.arrayBuffer();
+
+        // Convert array buffer to binary string for jsPDF
+        const fontBytes = new Uint8Array(fontBuffer);
+        let binaryString = '';
+        for (let i = 0; i < fontBytes.length; i++) {
+            binaryString += String.fromCharCode(fontBytes[i]);
+        }
+
+        // Add font to VFS and registers it
+        doc.addFileToVFS('NotoSansKR-Regular.ttf', binaryString);
+        doc.addFont('NotoSansKR-Regular.ttf', 'NotoSansKR', 'normal');
+        doc.setFont('NotoSansKR');
+    } catch (error) {
+        console.error('Error loading font:', error);
+        // Fallback or alert user
+        alert('한글 폰트 로드에 실패하여 글자가 깨질 수 있습니다.');
+    }
 
     // -- Cover Page --
     doc.setFontSize(24);
@@ -24,6 +52,9 @@ export const generateDailyReport = (todaysRankings: any[]) => {
     doc.text("1. Daily Market Analysis", 14, 20);
 
     doc.setFontSize(12);
+    // Use the Korean font
+    doc.setFont('NotoSansKR');
+
     doc.text(`Fear & Greed: ${marketAnalysisData.sentimentMacro.fearGreedIndex.value} (${marketAnalysisData.sentimentMacro.fearGreedIndex.status})`, 14, 30);
     doc.text(`Put/Call Ratio: ${marketAnalysisData.sentimentMacro.putCallRatio.value}`, 14, 38);
 
@@ -53,7 +84,7 @@ export const generateDailyReport = (todaysRankings: any[]) => {
         head: [['Rank', 'ETF Name', 'Price', 'Change']],
         body: rankingRows,
         startY: 30,
-        styles: { font: "helvetica" },
+        styles: { font: "NotoSansKR", fontStyle: "normal" }, // Apply font to table
     });
 
     // -- Chapter 3: Strategy Proposals --

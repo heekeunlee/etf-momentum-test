@@ -155,6 +155,76 @@ const QUESTION_BANK: Question[] = [
         options: ["모멘텀", "밸류에이션 (Valuation)", "센티먼트", "포트폴리오"],
         correctAnswer: 1,
         answerDesc: "밸류에이션은 기업의 가치 대비 주가 수준을 평가하는 작업입니다."
+    },
+    {
+        id: 21,
+        question: "중앙은행이 경제 상황에 맞춰 결정하는 금리로, 시중 금리의 기준이 되는 금리는?",
+        options: ["가산금리", "기준금리 (Base Rate)", "시장금리", "우대금리"],
+        correctAnswer: 1,
+        answerDesc: "기준금리는 한국은행 금융통화위원회에서 결정하며, 모든 금리의 기준이 됩니다."
+    },
+    {
+        id: 22,
+        question: "가정에서 소비하는 상품과 서비스의 가격 변동을 측정하여 인플레이션을 판단하는 대표적인 지표는?",
+        options: ["PPI", "BSI", "GDP", "CPI (소비자물가지수)"],
+        correctAnswer: 3,
+        answerDesc: "CPI(Consumer Price Index)는 소비자가 구입하는 재화/서비스의 가격 변동을 나타냅니다."
+    },
+    {
+        id: 23,
+        question: "주가가 하락할 것으로 예상될 때, 주식을 빌려서 먼저 판 뒤 나중에 싼 가격에 사서 갚는 투자 기법은?",
+        options: ["대주주 매도", "블록딜", "공매도 (Short Selling)", "자사주 매입"],
+        correctAnswer: 2,
+        answerDesc: "공매도(Short Selling)는 '없는 것을 판다'는 뜻으로 하락장에 베팅하는 전략입니다."
+    },
+    {
+        id: 24,
+        question: "ETF가 보유한 자산의 실제 가치를 뜻하며, 이 값보다 시장 가격이 높으면 '괴리율'이 발생했다고 하는 것은?",
+        options: ["IOPV", "NAV (순자산가치)", "EPS", "BPS"],
+        correctAnswer: 1,
+        answerDesc: "NAV(Net Asset Value)는 ETF 1주당 실제 자산 가치를 의미합니다."
+    },
+    {
+        id: 25,
+        question: "경기가 너무 뜨겁지도, 너무 차갑지도 않은 이상적인 경제 상태를 가리키는 용어는?",
+        options: ["스태그플레이션", "디플레이션", "골디락스 (Goldilocks)", "리세션"],
+        correctAnswer: 2,
+        answerDesc: "골디락스는 동화 '골디락스와 곰 세 마리'에서 유래한 용어로, 최적의 경제 상황을 뜻합니다."
+    },
+    {
+        id: 26,
+        question: "공매도 세력이 주가 상승으로 인한 손실을 막기 위해 급하게 주식을 다시 사들이며 주가가 폭등하는 현상은?",
+        options: ["패닉 바잉", "숏스퀴즈 (Short Squeeze)", "서킷브레이커", "사이드카"],
+        correctAnswer: 1,
+        answerDesc: "숏스퀴즈는 공매도 포지션 청산(숏커버링)이 몰리면서 주가가 급등하는 현상입니다."
+    },
+    {
+        id: 27,
+        question: "주가가 일정 기간 변동한 범위 내에서 현재 위치를 백분율로 나타낸 지표로, 박스권 매매에 유용한 것은?",
+        options: ["스토캐스틱 (Stochastic)", "이격도", "OBV", "CCI"],
+        correctAnswer: 0,
+        answerDesc: "스토캐스틱은 현재 주가가 해당 기간의 가격 범위 중 어디에 위치하는지 알려줍니다."
+    },
+    {
+        id: 28,
+        question: "시장에 풀려있는 돈의 양, 또는 자산을 현금으로 얼마나 쉽게 바꿀 수 있는지를 뜻하는 말은?",
+        options: ["변동성", "수익성", "유동성 (Liquidity)", "건전성"],
+        correctAnswer: 2,
+        answerDesc: "유동성이 풍부하다는 것은 시장에 돈이 많이 풀려 매매가 활발하다는 의미입니다."
+    },
+    {
+        id: 29,
+        question: "기업 입장에서 생산에 필요한 원자재 등의 가격 변동을 나타내며, 소비자물가(CPI)의 선행지표 역할을 하는 것은?",
+        options: ["PPI (생산자물가지수)", "PMI", "GNI", "GDP"],
+        correctAnswer: 0,
+        answerDesc: "PPI(Producer Price Index)가 오르면 시차를 두고 소비자물가도 오를 가능성이 큽니다."
+    },
+    {
+        id: 30,
+        question: "'주가는 속여도 이것은 못 속인다'는 말이 있으며, 주가 상승의 신뢰도를 판단하는 중요한 지표는?",
+        options: ["시가총액", "배당률", "거래량 (Volume)", "환율"],
+        correctAnswer: 2,
+        answerDesc: "거래량은 매수세의 강도를 보여주며, 거래량이 실린 상승이 진짜 상승일 확률이 높습니다."
     }
 ];
 

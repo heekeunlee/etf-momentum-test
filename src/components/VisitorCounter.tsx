@@ -7,7 +7,12 @@ export const VisitorCounter: React.FC = () => {
     useEffect(() => {
         const fetchCounts = async () => {
             try {
-                const today = new Date().toISOString().split('T')[0];
+                // Use local date to respect user's timezone (e.g. KST)
+                const date = new Date();
+                const year = date.getFullYear();
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const day = String(date.getDate()).padStart(2, '0');
+                const today = `${year}-${month}-${day}`;
                 const NAMESPACE = 'etf-momentum-test';
 
                 // Fetch and increment Total

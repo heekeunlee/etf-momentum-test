@@ -27,122 +27,122 @@ export interface MarketAnalysisData {
 
 
 export const marketAnalysisData: MarketAnalysisData = {
-    executiveSummary: `"<strong>Sector Rotation Confirmed (주도주 손바뀜)</strong>. 기존 <strong>반도체 독주</strong> 체제에서 <strong>2차전지(Batteries)</strong>와 <strong>우주항공(Space)</strong>으로 매수세가 확산되고 있습니다. 특히 2차전지 섹터의 숏커버링(Short-covering) 유입이 랭킹 급상승을 견인했습니다.<br><br><span style='color:#EF4444; font-weight:800;'>[Change vs Yesterday]</span>: 어제(1/27) 분석에서는 <strong>AI 반도체(HBM)</strong> 비중 확대를 권고했으나, 금일은 반도체 차익 실현 후 <strong>2차전지/우주항공</strong>으로의 포트폴리오 리밸런싱을 강력 제안합니다. 시장 색깔이 하루 만에 '성장주 소외'에서 '순환매'로 급변했습니다."`,
+    executiveSummary: `"<strong>Conflicting Signals: Shutdown Fear vs OPI Liquidity (셧다운 우려와 보너스 유동성)</strong>. 미국의 <strong>셧다운 임박(Government Shutdown)</strong>이 매크로 불확실성을 키우고 있으나, 국내적으로는 <strong>삼성 계열사 OPI(성과급) 지급</strong>에 따른 개인 투자자들의 유동성 유입이 기대됩니다. <br><br><span style='color:#EF4444; font-weight:800;'>[Market View]</span>: 대외 악재(셧다운)와 대내 호재(OPI 유동성)가 충돌하며 종목별 장세(Stock Picking)가 심화될 전망입니다. 1위 'PLUS 글로벌H/반도체'와 로봇 섹터의 주도력은 여전합니다."`,
     sentimentMacro: {
-        fearGreedIndex: { value: 72, status: "Greed", desc: "전일(68) 대비 상승. 공포 심리가 걷히고 FOMO(놓칠까 두려움) 심리가 유입되기 시작함." },
-        putCallRatio: { value: 0.78, desc: "콜옵션 집중 심화. 어제보다 하락 베팅이 더 줄어듦." }
+        fearGreedIndex: { value: 65, status: "Greed", desc: "미국 셧다운 우려로 전일 대비 하락했으나 여전히 투자 심리는 견조함." },
+        putCallRatio: { value: 0.72, desc: "풋옵션 거래 소폭 증가. 셧다운 리스크에 대한 헷지 수요 발생." }
     },
     globalLiquidity: {
-        foreignNetBuying: "전기전자 차익 실현 후 <strong>화학/운수장비</strong> 섹터로 순매수 전환. (전일: 전기전자 집중)",
-        sectorRotation: "AI반도체(Rest) → <strong>2차전지/소재(Breakout)</strong>. 어제까지의 주도주 쉬어가기 국면.",
-        usdKrw: "1,315원으로 소폭 하락. 환율 안정화가 외국인 수급 이동(반도체->2차전지)을 돕는 중."
+        foreignNetBuying: "관망세. 셧다운 불확실성 해소 전까지 적극적인 베팅 자제.",
+        sectorRotation: "<strong>AI 반도체</strong> 유지. 대외 변수에 덜 민감한 <strong>개별 종목 장세</strong> 예상.",
+        usdKrw: "1,310원대 유지. 안전자산 선호 현상으로 하방 경직성 확보."
     },
     sectorAnalysis: {
         space: {
-            title: "🚀 우주항공 (Aerospace) - 2일 연속 강세",
-            desc: "1위 수성. 어제 제시한 목표가 도달 후에도 매수세가 꺾이지 않음. 단순 테마를 넘어선 <strong>수주 산업</strong>으로서의 밸류에이션 리레이팅 지속.",
-            action: "Strong Buy (유지)",
-            topPick: "PLUS 우주항공&UAM"
+            title: "🤖 로봇 (Robotics) - 성장 스토리 유효",
+            desc: "대기업들의 로봇 사업 투자가 본격화되며 매수세 지속. 셧다운 이슈와 무관한 구조적 성장 섹터.",
+            action: "Buy (비중 유지)",
+            topPick: "KODEX 로봇액티브"
         },
         semi: {
-            title: "🔋 2차전지 (Batteries) - 극적인 턴어라운드",
-            desc: "<span style='color:#EF4444'>[NEW]</span> 어제까지 분석 대상에서 제외되었으나, 금일 <strong>거래량 폭발</strong>과 함께 주도 섹터로 급부상. 낙폭 과대 인식에 따른 <strong>저가 매수세</strong> 유입 확인.",
-            action: "Buy (신규 편입)",
-            topPick: "TIGER 2차전지TOP10"
+            title: "💾 AI 반도체 (AI Semi) - 삼성 OPI 수혜?",
+            desc: "삼성 계열사 OPI 지급으로 삼성전자 및 관련 밸류체인(반도체 소부장)으로의 개인 수급 유입 기대.",
+            action: "Strong Buy (유동성 수혜)",
+            topPick: "PLUS 글로벌H/반도체"
         }
     },
     quantSignals: {
-        momentum: "Very Strong (↑)",
-        volatility: "High",
-        volume: "Explosive (전일비 +20%)"
+        momentum: "Strong (상승세 유지)",
+        volatility: "High (변동성 확대 주의)",
+        volume: "Moderate (눈치보기 장세)"
     },
     finalVerdict: {
-        status: "AGGRESSIVE ROTATION (공격적 순환매)",
-        desc: "지수는 완만한 상승이지만 종목별 등락은 매우 큽니다. 어제 매수한 반도체 수익을 확정 짓고, <strong>이제 막 출발하는 2차전지</strong>에 올라타는 기민한 대응이 필요합니다."
+        status: "LIQUIDITY BOOST (OPI 유동성 효과)",
+        desc: "미 셧다운 노이즈는 단기적일 것입니다. 오히려 <strong>삼성 OPI 지급</strong>으로 인한 개인 유동성 유입이 하방을 지지할 것입니다. <strong>반도체와 로봇</strong> 중심의 저가 매수 기회로 삼으십시오."
     }
 };
 
 export const etfBuySellData = [
     {
-        name: "PLUS 우주항공&UAM",
+        name: "PLUS 글로벌H/반도체",
         code: "461580",
-        rank: "1위 (주간 +55.1%)",
-        action: "HOLD & ADD",
-        actionColor: '#16A34A',
-        actionBg: '#F0FDF4',
-        holdings: [
-            { name: "한화에어로스페이스", ratio: "25.1%" },
-            { name: "한국항공우주", ratio: "18.5%" },
-            { name: "한화시스템", ratio: "12.8%" },
-            { name: "LIG넥스원", ratio: "11.2%" },
-            { name: "현대로템", ratio: "9.8%" }
-        ],
-        fundamental: {
-            thesis: "[전일 대비] 어제에 이어 모멘텀 지속. 차익 실현 욕구가 강해질 수 있으나, 외국인 매수세가 여전히 견고함. 추세가 꺾이기 전까지는 보유 관점 유지.",
-            metrics: [
-                { label: "P/E Ratio", value: "24.1x", judge: "적정" },
-                { label: "EPS Growth", value: "+38%", judge: "초고성장" },
-                { label: "Momentum", value: "98/100", judge: "최상" }
-            ]
-        },
-        competitor: {
-            name: "vs KODEX 방산",
-            analysis: "순수 방산보다 우주 테마가 섞인 동 ETF의 베타가 더 높음. 상승장에서 유리."
-        },
-        flow: "기관 소폭 순매도 전환했으나 외국인은 지속 매수세.",
-        technical: {
-            trend: "파라볼릭 상승세 (과열권)",
-            indicators: ["RSI(14): 78 (과매수 유지)", "MFI: 82", "DMI: +DI 우위"]
-        },
-        scenarios: {
-            bull: { percent: "60%", target: "17,200원", desc: "추가 수주 공시 시 2차 슈팅" },
-            bear: { percent: "40%", target: "14,500원", desc: "과열권 진입에 따른 기술적 조정" }
-        },
-        strategy: {
-            entry: "조정 시 추가 매수",
-            goal: "18,000원",
-            stop: "13,500원"
-        }
-    },
-    {
-        name: "TIGER 2차전지TOP10",
-        code: "364980",
-        rank: "3위 (주간 +38.7%)",
-        action: "AGGRESSIVE BUY",
+        rank: "1위 (주간 +37.8%)",
+        action: "STRONG BUY",
         actionColor: '#DC2626',
         actionBg: '#FEF2F2',
         holdings: [
-            { name: "LG에너지솔루션", ratio: "22.5%" },
-            { name: "POSCO홀딩스", ratio: "19.2%" },
-            { name: "삼성SDI", ratio: "15.8%" },
-            { name: "에코프로비엠", ratio: "10.4%" },
-            { name: "포스코퓨처엠", ratio: "9.5%" }
+            { name: "NVIDIA", ratio: "25.5%" },
+            { name: "SK하이닉스", ratio: "20.1%" },
+            { name: "TSMC", ratio: "15.3%" },
+            { name: "삼성전자", ratio: "12.2%" },
+            { name: "AMD", ratio: "8.5%" }
         ],
         fundamental: {
-            thesis: "[전일 대비] 어제까지는 '관망' 의견이었으나 금일 '적극 매수'로 상향. 바닥 확인 후 V자 반등 시작. 전기차 수요 둔화 우려보다 밸류에이션 매력이 부각되는 시점.",
+            thesis: "[유동성 수혜 집중] 삼성전자, SK하이닉스 비중이 높아 <strong>삼성 OPI 지급</strong>에 따른 개인 수급 유입이 가장 기대되는 ETF입니다. 엔비디아의 AI 모멘텀과 국내 유동성 호재의 교집합.",
             metrics: [
-                { label: "P/B Ratio", value: "3.2x", judge: "저평가" },
-                { label: "Short Int", value: "High", judge: "스퀴즈 가능" },
-                { label: "RSI", value: "65", judge: "상승 여력" }
+                { label: "P/E Ratio", value: "28.5x", judge: "성장성 감안 저평가" },
+                { label: "EPS Growth", value: "+45%", judge: "초고속 성장" },
+                { label: "Liquidity", value: "High", judge: "수급 개선" }
             ]
         },
         competitor: {
-            name: "vs KODEX 2차전지산업",
-            analysis: "TOP10 위주의 구성으로 대형주 반등 장세에서 안정적인 수익 추구 가능."
+            name: "vs TIGER 미국필라델피아반도체",
+            analysis: "필라반도체 대비 HBM/AI 집중도가 높아 현재 장세에서 아웃퍼폼 예상."
         },
-        flow: "연기금 저가 매수 유입 포착 (신규).",
+        flow: "외국인 및 기관 동반 순매수 전환.",
         technical: {
-            trend: "역헤드앤숄더 패턴 완성 후 넥라인 돌파",
-            indicators: ["MACD: 골든크로스", "Volume: 전일비 300%", "Candle: 장대양봉"]
+            trend: "신고가 경신 시도 중",
+            indicators: ["RSI(14): 72 (강세 지속)", "MACD: 매수 신호 확산"]
         },
         scenarios: {
-            bull: { percent: "80%", target: "22,000원", desc: "숏커버링 유입 시 폭발적 상승" },
-            bear: { percent: "20%", target: "17,000원", desc: "단기 매물대 저항 맞고 횡보" }
+            bull: { percent: "70%", target: "21,000원", desc: "AI 모멘텀 재점화로 신고가 돌파" },
+            bear: { percent: "30%", target: "18,500원", desc: "단기 급등에 따른 기간 조정" }
         },
         strategy: {
-            entry: "현재가 (시장가 진입)",
-            goal: "24,000원 (+20%)",
-            stop: "16,500원"
+            entry: "시초가 공격적 매수",
+            goal: "23,000원",
+            stop: "17,800원"
+        }
+    },
+    {
+        name: "KODEX 로봇액티브",
+        code: "442650",
+        rank: "4위 (주간 +36.0%)",
+        action: "BUY (승부주)",
+        actionColor: '#EA580C',
+        actionBg: '#FFF7ED',
+        holdings: [
+            { name: "두산로보틱스", ratio: "18.2%" },
+            { name: "레인보우로보틱스", ratio: "15.5%" },
+            { name: "삼성전자", ratio: "10.1%" },
+            { name: "뉴로메카", ratio: "8.4%" },
+            { name: "티로보틱스", ratio: "6.7%" }
+        ],
+        fundamental: {
+            thesis: "[성장주로의 피난] 미 셧다운 우려 등 매크로 노이즈가 커질수록, 확실한 성장 스토리가 있는 로봇 섹터라 매력적입니다. 대기업 투자 가시화로 하방 경직성이 확보되었습니다.",
+            metrics: [
+                { label: "P/B Ratio", value: "4.5x", judge: "프리미엄 부여" },
+                { label: "Growth", value: "High", judge: "산업 태동기" },
+                { label: "Volume", value: "Surge", judge: "매집 징후" }
+            ]
+        },
+        competitor: {
+            name: "vs TIGER 글로벌AI로봇",
+            analysis: "국내 로봇 기업들의 주가 탄력성이 더 좋아 단기 수익률 유리."
+        },
+        flow: "투신권(사모펀드) 매수세 포착.",
+        technical: {
+            trend: "장기 박스권 상단 돌파 시도",
+            indicators: ["Obv: 우상향", "Stochastics: 과매수권 진입", "Bollinger: 상단 확장"]
+        },
+        scenarios: {
+            bull: { percent: "65%", target: "14,500원", desc: "박스권 돌파 시 강력한 숏커버링" },
+            bear: { percent: "35%", target: "11,200원", desc: "돌파 실패 시 실망 매물 출회" }
+        },
+        strategy: {
+            entry: "분할 매수 (눌림목 공략)",
+            goal: "16,000원",
+            stop: "10,800원"
         }
     }
 ];

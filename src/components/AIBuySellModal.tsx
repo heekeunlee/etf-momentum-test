@@ -151,29 +151,6 @@ export const AIBuySellModal: React.FC<AIBuySellModalProps> = ({ isOpen, onClose 
                             </div>
 
 
-                                // ... render ...
-                            <div style={{
-                                display: 'flex',
-                                gap: '1rem',
-                                alignItems: 'start',
-                                marginBottom: '2rem',
-                                padding: '1rem',
-                                backgroundColor: '#F0FDF4',
-                                border: '1px solid #BBF7D0',
-                                borderRadius: '0.75rem',
-                                color: '#166534',
-                                fontSize: '0.9rem',
-                                lineHeight: '1.6'
-                            }}>
-                                <AlertCircle size={24} style={{ flexShrink: 0, marginTop: '2px' }} />
-                                <div>
-                                    <strong style={{ display: 'block', marginBottom: '0.25rem' }}>AI Model Insight</strong>
-                                    <span style={{ wordBreak: 'keep-all' }}>
-                                        본 리포트는 <strong>블룸버그 터미널</strong>의 컨센서스 데이터와 <strong>자체 퀀트 알고리즘</strong>을 결합하여 생성되었습니다.
-                                        단순 주가 예측이 아닌, <strong>산업(Industry) - 기업(Company) - 수급(Flow)</strong>의 3차원 분석을 제공합니다.
-                                    </span>
-                                </div>
-                            </div>
 
                             {etfBuySellData.map((item, idx) => (
                                 <div key={idx} style={{
