@@ -9,6 +9,7 @@ import { AIQuizModal } from './AIQuizModal';
 import { FortuneModal } from './FortuneModal';
 import { BalanceGameModal } from './BalanceGameModal';
 import { FomoCalculatorModal } from './FomoCalculatorModal';
+import { TradingLogModal } from './TradingLogModal';
 
 export const Header: React.FC = () => {
     const [isAIModalOpen, setIsAIModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export const Header: React.FC = () => {
     const [isFortuneModalOpen, setIsFortuneModalOpen] = useState(false);
     const [isBalanceGameModalOpen, setIsBalanceGameModalOpen] = useState(false);
     const [isFomoModalOpen, setIsFomoModalOpen] = useState(false);
+    const [isTradingLogModalOpen, setIsTradingLogModalOpen] = useState(false);
 
     const handleConfetti = useCallback(() => {
         const scalar = 2;
@@ -215,6 +217,27 @@ export const Header: React.FC = () => {
                         <span>💊</span>
                         FOMO 치료기
                     </button>
+
+                    <button
+                        onClick={() => setIsTradingLogModalOpen(true)}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.25rem',
+                            padding: '0.25rem 0.5rem',
+                            backgroundColor: '#FFE4E6', // Light Pink
+                            border: '1px solid #FDA4AF',
+                            borderRadius: '0.25rem',
+                            color: '#BE123C', // Rose 700
+                            fontSize: '0.7rem',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        <span>📈</span>
+                        실현손익 (New)
+                    </button>
                 </div>
             </div>
 
@@ -225,6 +248,7 @@ export const Header: React.FC = () => {
             <FortuneModal isOpen={isFortuneModalOpen} onClose={() => setIsFortuneModalOpen(false)} />
             <BalanceGameModal isOpen={isBalanceGameModalOpen} onClose={() => setIsBalanceGameModalOpen(false)} />
             <FomoCalculatorModal isOpen={isFomoModalOpen} onClose={() => setIsFomoModalOpen(false)} />
+            <TradingLogModal isOpen={isTradingLogModalOpen} onClose={() => setIsTradingLogModalOpen(false)} />
 
             <div className="container" style={{ height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
