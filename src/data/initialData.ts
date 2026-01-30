@@ -6,7 +6,7 @@ export const initialData: RankingReport = {
         {
             categoryName: "국내 주식 (Domestic Stock)",
             items: [
-                { rank: 1, name: "PLUS 글로벌H/반도체", yield1W: "+37.8%", yield1M: "+60.3%", yield3M: "+191.3%", yield6M: "+241.4%" },
+                { rank: 1, name: "PLUS 글로벌HBM반도체", yield1W: "+37.8%", yield1M: "+60.3%", yield3M: "+191.3%", yield6M: "+241.4%" },
                 { rank: 2, name: "PLUS 우주항공&UAM", yield1W: "+50.0%", yield1M: "+66.3%", yield3M: "+65.5%", yield6M: "+181.9%" },
                 { rank: 3, name: "TIGER 반도체 TOP10", yield1W: "+38.2%", yield1M: "+49.4%", yield3M: "+137.9%", yield6M: "+174.6%" },
                 { rank: 4, name: "KODEX 로봇액티브", yield1W: "+36.0%", yield1M: "+60.3%", yield3M: "+118.6%", yield6M: "+166.5%" },

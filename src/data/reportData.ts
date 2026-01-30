@@ -27,7 +27,7 @@ export interface MarketAnalysisData {
 
 
 export const marketAnalysisData: MarketAnalysisData = {
-    executiveSummary: `"<strong>Conflicting Signals: Shutdown Fear vs OPI Liquidity (셧다운 우려와 보너스 유동성)</strong>. 미국의 <strong>셧다운 임박(Government Shutdown)</strong>이 매크로 불확실성을 키우고 있으나, 국내적으로는 <strong>삼성 계열사 OPI(성과급) 지급</strong>에 따른 개인 투자자들의 유동성 유입이 기대됩니다. <br><br><span style='color:#EF4444; font-weight:800;'>[Market View]</span>: 대외 악재(셧다운)와 대내 호재(OPI 유동성)가 충돌하며 종목별 장세(Stock Picking)가 심화될 전망입니다. 1위 'PLUS 글로벌H/반도체'와 로봇 섹터의 주도력은 여전합니다."`,
+    executiveSummary: `"<strong>Conflicting Signals: Shutdown Fear vs OPI Liquidity (셧다운 우려와 보너스 유동성)</strong>. 미국의 <strong>셧다운 임박(Government Shutdown)</strong>이 매크로 불확실성을 키우고 있으나, 국내적으로는 <strong>삼성 계열사 OPI(성과급) 지급</strong>에 따른 개인 투자자들의 유동성 유입이 기대됩니다. <br><br><span style='color:#EF4444; font-weight:800;'>[Market View]</span>: 대외 악재(셧다운)와 대내 호재(OPI 유동성)가 충돌하며 종목별 장세(Stock Picking)가 심화될 전망입니다. 1위 'PLUS 글로벌HBM반도체'와 로봇 섹터의 주도력은 여전합니다."`,
     sentimentMacro: {
         fearGreedIndex: { value: 65, status: "Greed", desc: "미국 셧다운 우려로 전일 대비 하락했으나 여전히 투자 심리는 견조함." },
         putCallRatio: { value: 0.72, desc: "풋옵션 거래 소폭 증가. 셧다운 리스크에 대한 헷지 수요 발생." }
@@ -48,7 +48,7 @@ export const marketAnalysisData: MarketAnalysisData = {
             title: "💾 AI 반도체 (AI Semi) - 삼성 OPI 수혜?",
             desc: "삼성 계열사 OPI 지급으로 삼성전자 및 관련 밸류체인(반도체 소부장)으로의 개인 수급 유입 기대.",
             action: "Strong Buy (유동성 수혜)",
-            topPick: "PLUS 글로벌H/반도체"
+            topPick: "PLUS 글로벌HBM반도체"
         }
     },
     quantSignals: {
@@ -64,7 +64,7 @@ export const marketAnalysisData: MarketAnalysisData = {
 
 export const etfBuySellData = [
     {
-        name: "PLUS 글로벌H/반도체",
+        name: "PLUS 글로벌HBM반도체",
         code: "461580",
         rank: "1위 (주간 +37.8%)",
         action: "STRONG BUY",
