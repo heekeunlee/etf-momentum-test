@@ -1,7 +1,7 @@
 import type { RankingReport } from '../types';
 
 export const initialData: RankingReport = {
-    date: '2026-02-03',
+    date: '2026-02-04',
     categories: [
         {
             categoryName: "국내 주식 (Domestic Stock)",
@@ -34,17 +34,23 @@ export const initialData: RankingReport = {
                 { rank: 1, name: "KODEX iShares미국하이일드액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+8.1%", yield1Y: "+6.0%" },
                 { rank: 2, name: "PLUS 일본엔화초단기국채(합성)", yield1M: "+1.8%", yield3M: "-0.9%", yield6M: "-0.5%", yield1Y: "-0.1%" },
                 { rank: 3, name: "ACE 미국하이일드액티브(H)", yield1M: "+0.6%", yield3M: "+0.8%", yield6M: "+2.0%", yield1Y: "+4.9%" },
-                { rank: 4, name: "PLUS 미국단기회사채(AAA~A)", yield1M: "-0.2%", yield3M: "+0.3%", yield6M: "+6.6%", yield1Y: "+2.7%" },
-                { rank: 5, name: "RISE 미국단기투자등급회사채액티브", yield1M: "-0.3%", yield3M: "+0.1%", yield6M: "+7.1%", yield1Y: "+4.4%" },
+                { rank: 4, name: "[주의] PLUS 미국단기회사채(AAA~A)", yield1M: "-0.2%", yield3M: "+0.3%", yield6M: "+6.6%", yield1Y: "+2.7%" },
+                { rank: 5, name: "[주의] RISE 미국단기투자등급회사채액티브", yield1M: "-0.3%", yield3M: "+0.1%", yield6M: "+7.1%", yield1Y: "+4.4%" },
                 { rank: 6, name: "ACE 11월만기자동연장회사채AA-이상액티브", yield1M: "+0.3%", yield3M: "+0.8%", yield6M: "+1.5%", yield1Y: "+3.2%" },
-                { rank: 7, name: "TIGER 단기선진하이일드(합성 H)", yield1M: "+0.3%", yield3M: "+0.8%", yield6M: "+1.6%", yield1Y: "+6.4%" },
+                { rank: 7, name: "[주의] TIGER 단기선진하이일드(합성 H)", yield1M: "+0.3%", yield3M: "+0.8%", yield6M: "+1.6%", yield1Y: "+6.4%" },
                 { rank: 8, name: "KODEX 머니마켓액티브", yield1M: "+0.3%", yield3M: "+0.8%", yield6M: "+1.5%", yield1Y: "+3.1%" },
                 { rank: 9, name: "WON 전단채플러스액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.4%" },
                 { rank: 10, name: "SOL 초단기채권액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.2%" },
                 { rank: 11, name: "SOL CD금리&머니마켓액티브", yield1M: "+0.2%", yield3M: "+0.8%", yield6M: "+1.5%", yield1Y: "+3.2%" },
                 { rank: 12, name: "RISE 머니마켓액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.1%" },
                 { rank: 13, name: "1Q 머니마켓액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.1%" },
-                { rank: 14, name: "PLUS 국공채머니마켓액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.3%", yield1Y: "+3.0%" }
+                { rank: 14, name: "PLUS 국공채머니마켓액티브", yield1M: "+0.3%", yield3M: "+0.7%", yield6M: "+1.3%", yield1Y: "+3.0%" },
+                { rank: 15, name: "[주의] KODEX 아시아달러채권ESG플러스액티브", yield1M: "-0.3%", yield3M: "-0.6%", yield6M: "+7.5%", yield1Y: "+5.8%" },
+                { rank: 16, name: "ACE 8월만기자동연장회사채AA-이상액티브", yield1M: "+0.3%", yield3M: "+0.5%", yield6M: "+1.2%", yield1Y: "+2.7%" },
+                { rank: 17, name: "PLUS 머니마켓액티브", yield1M: "+0.2%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.1%" },
+                { rank: 18, name: "ACE 머니마켓액티브", yield1M: "+0.2%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.0%" },
+                { rank: 19, name: "HANARO 머니마켓액티브", yield1M: "+0.2%", yield3M: "+0.7%", yield6M: "+1.4%", yield1Y: "+3.1%" },
+                { rank: 20, name: "ACE 26-06 회사채(AA-이상)액티브", yield1M: "+0.3%", yield3M: "+0.6%", yield6M: "+1.2%", yield1Y: "+3.1%" }
             ]
         },
         {
@@ -74,7 +80,11 @@ export const initialData: RankingReport = {
                 { rank: 4, name: "WON 한국부동산TOP3플러스", yield1M: "+2.6%", yield3M: "+5.9%", yield6M: "+8.6%", yield1Y: "+16.0%" },
                 { rank: 5, name: "PLUS K리츠", yield1M: "+2.3%", yield3M: "+4.7%", yield6M: "+11.2%", yield1Y: "+19.0%" },
                 { rank: 6, name: "KODEX 한국부동산리츠인프라", yield1M: "+1.1%", yield3M: "+3.6%", yield6M: "+8.4%", yield1Y: "+16.3%" },
-                { rank: 7, name: "RISE 글로벌리얼티인컴", yield1M: "+2.3%", yield3M: "+0.5%", yield6M: "+3.7%", yield1Y: "+5.9%" }
+                { rank: 7, name: "RISE 글로벌리얼티인컴", yield1M: "+2.3%", yield3M: "+0.5%", yield6M: "+3.7%", yield1Y: "+5.9%" },
+                { rank: 8, name: "[주의] TIGER 미국MSCI리츠(합성 H)", yield1M: "+0.8%", yield3M: "+0.3%", yield6M: "+1.1%", yield1Y: "+1.3%" },
+                { rank: 9, name: "KODEX 일본부동산리츠(H)", yield1M: "-1.4%", yield3M: "+2.0%", yield6M: "+11.0%", yield1Y: "+26.4%" },
+                { rank: 10, name: "[주의] ACE 미국부동산리츠(합성 H)", yield1M: "+1.2%", yield3M: "+0.7%", yield6M: "-2.4%", yield1Y: "+1.1%" },
+                { rank: 11, name: "KODEX 미국부동산리츠(H)", yield1M: "+1.4%", yield3M: "-0.7%", yield6M: "-1.9%", yield1Y: "+4.6%" }
             ]
         },
         {
