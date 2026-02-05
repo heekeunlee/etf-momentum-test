@@ -1,7 +1,7 @@
 import type { RankingReport } from '../types';
 
 export const initialData: RankingReport = {
-    date: '2026-02-04',
+    date: '2026-02-05',
     categories: [
         {
             categoryName: "국내 주식 (Domestic Stock)",
