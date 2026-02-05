@@ -104,12 +104,7 @@ export const initialData: RankingReport = {
                 { rank: 12, name: "PLUS 스마트베타Quality채권혼합", yield1M: "+3.2%", yield3M: "+4.1%", yield6M: "+7.7%", yield1Y: "+17.0%" },
                 { rank: 13, name: "KIWOOM TDF2040액티브", yield1M: "+2.5%", yield3M: "+2.4%", yield6M: "+14.3%", yield1Y: "+17.0%" },
                 { rank: 14, name: "TIGER 경기방어채권혼합", yield1M: "+3.2%", yield3M: "+4.6%", yield6M: "+5.5%", yield1Y: "+11.9%" },
-                { rank: 15, name: "RISE 헬스케어채권혼합", yield1M: "+2.7%", yield3M: "+4.7%", yield6M: "+7.6%", yield1Y: "+10.1%" },
-                { rank: 16, name: "KODEX TDF2050액티브", yield1M: "+2.3%", yield3M: "+2.1%", yield6M: "+11.8%", yield1Y: "+17.5%" },
-                { rank: 17, name: "TIGER 리츠부동산인프라채권", yield1M: "+2.3%", yield3M: "+3.6%", yield6M: "+7.1%", yield1Y: "+14.1%" },
-                { rank: 18, name: "SOL 미국배당미국채혼합50", yield1M: "+1.6%", yield3M: "+4.0%", yield6M: "+9.9%", yield1Y: "+6.1%" },
-                { rank: 19, name: "KIWOOM TDF2030액티브", yield1M: "+1.7%", yield3M: "+1.3%", yield6M: "+10.9%", yield1Y: "+12.8%" },
-                { rank: 20, name: "[주의] ACE 미국나스닥100미국채혼합50액티브", yield1M: "+1.6%", yield3M: "+0.9%", yield6M: "+11.8%", yield1Y: "+10.8%" }
+                { rank: 15, name: "RISE 헬스케어채권혼합", yield1M: "+2.7%", yield3M: "+4.7%", yield6M: "+7.6%", yield1Y: "+10.1%" }
             ]
         },
         {
