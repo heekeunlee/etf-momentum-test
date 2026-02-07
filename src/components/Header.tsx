@@ -9,6 +9,7 @@ import { AIQuizModal } from './AIQuizModal';
 import { FortuneModal } from './FortuneModal';
 import { BalanceGameModal } from './BalanceGameModal';
 import { FomoCalculatorModal } from './FomoCalculatorModal';
+import { EtfQuantGuideModal } from './EtfQuantGuideModal';
 
 export const Header: React.FC = () => {
     const [isAIModalOpen, setIsAIModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export const Header: React.FC = () => {
     const [isFortuneModalOpen, setIsFortuneModalOpen] = useState(false);
     const [isBalanceGameModalOpen, setIsBalanceGameModalOpen] = useState(false);
     const [isFomoModalOpen, setIsFomoModalOpen] = useState(false);
+    const [isGuideModalOpen, setIsGuideModalOpen] = useState(false);
 
 
     const handleConfetti = useCallback(() => {
@@ -64,160 +66,80 @@ export const Header: React.FC = () => {
             <div style={{ backgroundColor: '#F8FAFC', padding: '0.75rem', fontSize: '0.75rem', color: '#475569', borderBottom: '1px solid #E2E8F0', lineHeight: '1.6', textAlign: 'left' }}>
                 <p style={{ marginBottom: '0.25rem' }}>[공지사항]</p>
                 <div style={{ wordBreak: 'keep-all', marginBottom: '0.5rem' }}>
-                    1. 본 url을 임의로 다른사람에게 배포하지 마세요 (문제시 사이트 폐쇄)<br />
-                    2. 상승주도 랭킹을 참고하여 투자하되, 투자의 책임은 본인에게 있음.<br />
-                    3. 화면의 복주머니를 클릭해보세요!
+                    일주일간 ETF 반찬가게 쉽니다 (~2/13)
                 </div>
 
-                <div className="header-button-grid">
-                    <button
-                        onClick={() => setIsAIModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#EFF6FF',
-                            border: '1px solid #BFDBFE',
-                            borderRadius: '0.25rem',
-                            color: '#2563EB',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <Bot size={12} />
-                        AI 일일 마켓분석
-                    </button>
+                <div className="relative">
+                    <div className="header-button-grid flex flex-wrap justify-center gap-1.5 md:flex-nowrap md:overflow-hidden md:gap-2">
+                        <button
+                            onClick={() => setIsAIModalOpen(true)}
+                            className="bg-blue-50 text-blue-600 border border-blue-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <Bot size={12} />
+                            AI 마켓분석
+                        </button>
 
-                    <button
-                        onClick={() => setIsBuySellModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#EFF6FF',
-                            border: '1px solid #BFDBFE',
-                            borderRadius: '0.25rem',
-                            color: '#2563EB',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <Lock size={12} />
-                        AI 매수/매도 제안
-                    </button>
+                        <button
+                            onClick={() => setIsBuySellModalOpen(true)}
+                            className="bg-indigo-50 text-indigo-600 border border-indigo-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <Lock size={12} />
+                            AI 매수매도 제안
+                        </button>
 
-                    <button
-                        onClick={() => setIsTerminologyModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#EFF6FF',
-                            border: '1px solid #BFDBFE',
-                            borderRadius: '0.25rem',
-                            color: '#2563EB',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <BookOpen size={12} />
-                        용어 가이드
-                    </button>
+                        <button
+                            onClick={() => setIsGuideModalOpen(true)}
+                            className="relative bg-teal-50 text-teal-700 border border-teal-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <BookOpen size={12} />
+                            ETF 퀀트 투자란?
+                            <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                            </span>
+                            <span className="absolute -top-2.5 -right-4 text-[0.5rem] font-black text-blue-600 animate-bounce">New</span>
+                        </button>
 
-                    <button
-                        onClick={() => setIsQuizModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#EFF6FF',
-                            border: '1px solid #BFDBFE',
-                            borderRadius: '0.25rem',
-                            color: '#2563EB',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <BrainCircuit size={12} />
-                        경제 퀴즈
-                    </button>
+                        <button
+                            onClick={() => setIsTerminologyModalOpen(true)}
+                            className="bg-green-50 text-green-600 border border-green-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <BookOpen size={12} />
+                            용어 가이드
+                        </button>
 
-                    <button
-                        onClick={() => setIsFortuneModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#FEF9C3', // Light Yellow
-                            border: '1px solid #FDE047',
-                            borderRadius: '0.25rem',
-                            color: '#854D0E', // Dark Yellow/Brown
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <span>💰</span>
-                        오늘의 투자운세
-                    </button>
+                        <button
+                            onClick={() => setIsQuizModalOpen(true)}
+                            className="bg-violet-50 text-violet-600 border border-violet-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <BrainCircuit size={12} />
+                            경제 퀴즈
+                        </button>
 
-                    <button
-                        onClick={() => setIsBalanceGameModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#F3E8FF', // Light Purple
-                            border: '1px solid #D8B4FE',
-                            borderRadius: '0.25rem',
-                            color: '#6B21A8',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <span>⚖️</span>
-                        투자 밸런스 게임
-                    </button>
+                        <button
+                            onClick={() => setIsFortuneModalOpen(true)}
+                            className="bg-yellow-50 text-yellow-700 border border-yellow-200 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <span>💰</span>
+                            오늘의 운세
+                        </button>
 
-                    <button
-                        onClick={() => setIsFomoModalOpen(true)}
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: '0.25rem 0.5rem',
-                            backgroundColor: '#FEE2E2', // Light Red
-                            border: '1px solid #FCA5A5',
-                            borderRadius: '0.25rem',
-                            color: '#991B1B',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                        }}
-                    >
-                        <span>💊</span>
-                        FOMO 치료기
-                    </button>
+                        <button
+                            onClick={() => setIsBalanceGameModalOpen(true)}
+                            className="bg-purple-50 text-purple-600 border border-purple-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <span>⚖️</span>
+                            밸런스 게임
+                        </button>
 
-
+                        <button
+                            onClick={() => setIsFomoModalOpen(true)}
+                            className="bg-red-50 text-red-600 border border-red-100 rounded-full px-2 py-1 text-[10px] font-bold flex items-center gap-1 whitespace-nowrap"
+                        >
+                            <span>💊</span>
+                            FOMO 치료기
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -228,6 +150,7 @@ export const Header: React.FC = () => {
             <FortuneModal isOpen={isFortuneModalOpen} onClose={() => setIsFortuneModalOpen(false)} />
             <BalanceGameModal isOpen={isBalanceGameModalOpen} onClose={() => setIsBalanceGameModalOpen(false)} />
             <FomoCalculatorModal isOpen={isFomoModalOpen} onClose={() => setIsFomoModalOpen(false)} />
+            <EtfQuantGuideModal isOpen={isGuideModalOpen} onClose={() => setIsGuideModalOpen(false)} />
 
 
             <div className="container" style={{ height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
