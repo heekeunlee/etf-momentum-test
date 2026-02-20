@@ -66,7 +66,9 @@ export const Header: React.FC = () => {
             <div style={{ backgroundColor: '#F8FAFC', padding: '0.75rem', fontSize: '0.75rem', color: '#475569', borderBottom: '1px solid #E2E8F0', lineHeight: '1.6', textAlign: 'left' }}>
                 <p style={{ marginBottom: '0.25rem' }}>[공지사항]</p>
                 <div style={{ wordBreak: 'keep-all', marginBottom: '0.5rem' }}>
-                    일주일간 ETF 반찬가게 쉽니다 (~2/13)
+                    1. 오랜만에 업데이트 해봤는데 상승모멘텀 순위가 바뀌었네요<br />
+                    2. 한방에 나락갈수 있으니 투자에 신중을 기하시길....<br />
+                    3. 폭락에 대비하는 자세, 중요!!
                 </div>
 
                 <div className="relative">
