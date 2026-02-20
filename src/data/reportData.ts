@@ -27,122 +27,122 @@ export interface MarketAnalysisData {
 
 
 export const marketAnalysisData: MarketAnalysisData = {
-    executiveSummary: `"<strong>Conflicting Signals: Shutdown Fear vs OPI Liquidity (셧다운 우려와 보너스 유동성)</strong>. 미국의 <strong>셧다운 임박(Government Shutdown)</strong>이 매크로 불확실성을 키우고 있으나, 국내적으로는 <strong>삼성 계열사 OPI(성과급) 지급</strong>에 따른 개인 투자자들의 유동성 유입이 기대됩니다. <br><br><span style='color:#EF4444; font-weight:800;'>[Market View]</span>: 대외 악재(셧다운)와 대내 호재(OPI 유동성)가 충돌하며 종목별 장세(Stock Picking)가 심화될 전망입니다. 1위 'PLUS 글로벌HBM반도체'와 로봇 섹터의 주도력은 여전합니다."`,
+    executiveSummary: `"<strong>Paradigm Shift: The Rise of Value & Yield (저PBR 밸류업과 배당의 시간)</strong>. 글로벌 매크로의 불확실성이 지속되는 가운데, 국내 증시는 <strong>기업 밸류업 프로그램(Corporate Value-up Program)</strong>의 구체화 기대감으로 거대한 자금 이동이 발생하고 있습니다. <br><br><span style='color:#EF4444; font-weight:800;'>[Market View]</span>: 성장주(반도체, 로봇)에서 가치주(증권, 금융, 고배당)로의 명확한 주도주 교체(Sector Rotation)가 확인됩니다. 특히 1위를 차지한 'TIGER 증권'과 '주식혼합/고배당' ETF들의 압도적인 수익률이 이를 증명합니다. 단순한 테마가 아닌 <strong>주주환원</strong>이라는 구조적 변화에 베팅할 때입니다."`,
     sentimentMacro: {
-        fearGreedIndex: { value: 65, status: "Greed", desc: "미국 셧다운 우려로 전일 대비 하락했으나 여전히 투자 심리는 견조함." },
-        putCallRatio: { value: 0.72, desc: "풋옵션 거래 소폭 증가. 셧다운 리스크에 대한 헷지 수요 발생." }
+        fearGreedIndex: { value: 72, status: "Greed", desc: "정부 정책 기대감으로 국내 투자 심리 회복. 저 PBR 관련주로 스마트 머니 유입 중." },
+        putCallRatio: { value: 0.65, desc: "콜옵션 거래 우위. 하락 베팅보다는 상승 추세 수용 심리가 강함." }
     },
     globalLiquidity: {
-        foreignNetBuying: "관망세. 셧다운 불확실성 해소 전까지 적극적인 베팅 자제.",
-        sectorRotation: "<strong>AI 반도체</strong> 유지. 대외 변수에 덜 민감한 <strong>개별 종목 장세</strong> 예상.",
-        usdKrw: "1,310원대 유지. 안전자산 선호 현상으로 하방 경직성 확보."
+        foreignNetBuying: "외국인/기관 쌍끌이 매수. 특히 <strong>금융지주 및 저PBR 지주사</strong> 집중.",
+        sectorRotation: "<strong>성장 -> 가치 (고배당/금융)</strong>로의 자금 대이동. 단기 테마가 아닌 중장기 트렌드 형성.",
+        usdKrw: "환율 변동성 축소. 외국인 수급 지속 유입에 긍정적 환경 조성."
     },
     sectorAnalysis: {
         space: {
-            title: "🤖 로봇 (Robotics) - 성장 스토리 유효",
-            desc: "대기업들의 로봇 사업 투자가 본격화되며 매수세 지속. 셧다운 이슈와 무관한 구조적 성장 섹터.",
-            action: "Buy (비중 유지)",
-            topPick: "KODEX 로봇액티브"
+            title: "📈 증권/금융 (Finance) - 정책의 최대 수혜",
+            desc: "PBR 1배 미만의 극심한 저평가 구간. 배당 확대와 자사주 소각 등 주주환원 강화를 통한 밸류에이션 리레이팅(Re-rating) 폭발.",
+            action: "Strong Buy (핵심 주도주)",
+            topPick: "TIGER 증권"
         },
         semi: {
-            title: "💾 AI 반도체 (AI Semi) - 삼성 OPI 수혜?",
-            desc: "삼성 계열사 OPI 지급으로 삼성전자 및 관련 밸류체인(반도체 소부장)으로의 개인 수급 유입 기대.",
-            action: "Strong Buy (유동성 수혜)",
-            topPick: "PLUS 글로벌HBM반도체"
+            title: "⚖️ 주식혼합 (Mixed Asset/Dividend) - 방패와 창",
+            desc: "시장 변동성을 방어하는 우량 채권과, 수익률을 견인하는 고배당/가치주의 황금비율. 퇴직연금 자금의 지속적 유입 기대.",
+            action: "Buy (포트폴리오 코어)",
+            topPick: "RISE 주식혼합"
         }
     },
     quantSignals: {
-        momentum: "Strong (상승세 유지)",
-        volatility: "High (변동성 확대 주의)",
-        volume: "Moderate (눈치보기 장세)"
+        momentum: "Extremely Strong (가치주 폭등세)",
+        volatility: "Moderate (성장주 차익매물 주의)",
+        volume: "Surge (금융/증권 섹터 거래대금 집중)"
     },
     finalVerdict: {
-        status: "LIQUIDITY BOOST (OPI 유동성 효과)",
-        desc: "미 셧다운 노이즈는 단기적일 것입니다. 오히려 <strong>삼성 OPI 지급</strong>으로 인한 개인 유동성 유입이 하방을 지지할 것입니다. <strong>반도체와 로봇</strong> 중심의 저가 매수 기회로 삼으십시오."
+        status: "VALUE DRIVEN (가치주의 화려한 부활)",
+        desc: "오랜 시간 소외받던 <strong>만년 저평가(증권/금융/고배당) 주식들의 반란</strong>입니다. 정부의 강력한 의지와 행동주의 펀드의 압박이 맞물려 있습니다. 포트폴리오의 무게중심을 <strong>주주환원 친화적 ETF</strong>로 확실하게 옮기시길 강력히 권고합니다."
     }
 };
 
 export const etfBuySellData = [
     {
-        name: "PLUS 글로벌HBM반도체",
-        code: "461580",
-        rank: "1위 (주간 +37.8%)",
+        name: "TIGER 증권",
+        code: "157500",
+        rank: "국내 주식 1위 (최근 1년 +260.7%)",
         action: "STRONG BUY",
         actionColor: '#DC2626',
         actionBg: '#FEF2F2',
         holdings: [
-            { name: "NVIDIA", ratio: "25.5%" },
-            { name: "SK하이닉스", ratio: "20.1%" },
-            { name: "TSMC", ratio: "15.3%" },
-            { name: "삼성전자", ratio: "12.2%" },
-            { name: "AMD", ratio: "8.5%" }
+            { name: "메리츠금융지주", ratio: "18.5%" },
+            { name: "한국금융지주", ratio: "16.1%" },
+            { name: "NH투자증권", ratio: "14.3%" },
+            { name: "미래에셋증권", ratio: "13.2%" },
+            { name: "삼성증권", ratio: "11.5%" }
         ],
         fundamental: {
-            thesis: "[유동성 수혜 집중] 삼성전자, SK하이닉스 비중이 높아 <strong>삼성 OPI 지급</strong>에 따른 개인 수급 유입이 가장 기대되는 ETF입니다. 엔비디아의 AI 모멘텀과 국내 유동성 호재의 교집합.",
+            thesis: "[밸류업 폭발력] 만년 저평가(PBR 0.5배 미만)를 받던 증권주들이 <strong>기업 밸류업 프로그램</strong>의 핵심 수혜주로 부상하며 자사주 매입/소각과 배당 확대의 선봉장에 섰습니다.",
             metrics: [
-                { label: "P/E Ratio", value: "28.5x", judge: "성장성 감안 저평가" },
-                { label: "EPS Growth", value: "+45%", judge: "초고속 성장" },
-                { label: "Liquidity", value: "High", judge: "수급 개선" }
+                { label: "P/B Ratio", value: "0.45x", judge: "극심한 저평가" },
+                { label: "Dividend", value: "6.5%", judge: "고배당 매력" },
+                { label: "Liquidity", value: "High", judge: "기관/외인 매수" }
             ]
         },
         competitor: {
-            name: "vs TIGER 미국필라델피아반도체",
-            analysis: "필라반도체 대비 HBM/AI 집중도가 높아 현재 장세에서 아웃퍼폼 예상."
+            name: "vs KODEX 증권",
+            analysis: "유사한 포트폴리오이나 TIGER의 브랜드 파워 및 호가 유동성 측면에서 소폭 우위."
         },
-        flow: "외국인 및 기관 동반 순매수 전환.",
+        flow: "외국인 및 기관 동반 순매수 전환. (특히 연기금 유입)",
         technical: {
-            trend: "신고가 경신 시도 중",
-            indicators: ["RSI(14): 72 (강세 지속)", "MACD: 매수 신호 확산"]
+            trend: "장기 하락 추세 돌파",
+            indicators: ["RSI(14): 75 (강력 매수)", "MACD: 골든크로스 이후 우상향"]
         },
         scenarios: {
-            bull: { percent: "70%", target: "21,000원", desc: "AI 모멘텀 재점화로 신고가 돌파" },
-            bear: { percent: "30%", target: "18,500원", desc: "단기 급등에 따른 기간 조정" }
+            bull: { percent: "80%", target: "12,000원", desc: "정부 밸류업 세부안 발표 시 추가 급등" },
+            bear: { percent: "20%", target: "8,500원", desc: "단기 급등에 따른 기간 조정" }
         },
         strategy: {
             entry: "시초가 공격적 매수",
-            goal: "23,000원",
-            stop: "17,800원"
+            goal: "13,500원",
+            stop: "8,000원"
         }
     },
     {
-        name: "KODEX 로봇액티브",
-        code: "442650",
-        rank: "4위 (주간 +36.0%)",
-        action: "BUY (승부주)",
+        name: "RISE 주식혼합",
+        code: "105010",
+        rank: "혼합자산 1위 (최근 1년 +85.9%)",
+        action: "BUY (포트폴리오 코어)",
         actionColor: '#EA580C',
         actionBg: '#FFF7ED',
         holdings: [
-            { name: "두산로보틱스", ratio: "18.2%" },
-            { name: "레인보우로보틱스", ratio: "15.5%" },
-            { name: "삼성전자", ratio: "10.1%" },
-            { name: "뉴로메카", ratio: "8.4%" },
-            { name: "티로보틱스", ratio: "6.7%" }
+            { name: "국고채(3년)", ratio: "45.0%" },
+            { name: "삼성전자", ratio: "12.5%" },
+            { name: "현대차", ratio: "8.1%" },
+            { name: "KB금융", ratio: "7.4%" },
+            { name: "SK하이닉스", ratio: "5.7%" }
         ],
         fundamental: {
-            thesis: "[성장주로의 피난] 미 셧다운 우려 등 매크로 노이즈가 커질수록, 확실한 성장 스토리가 있는 로봇 섹터라 매력적입니다. 대기업 투자 가시화로 하방 경직성이 확보되었습니다.",
+            thesis: "[안정성과 수익의 조화] 채권의 이자 수익으로 하방을 방어하면서, 삼성전자/현대차/KB금융 등 코스피 대형 가치주/배당주의 상승 모멘텀을 온전히 누릴 수 있는 구조입니다.",
             metrics: [
-                { label: "P/B Ratio", value: "4.5x", judge: "프리미엄 부여" },
-                { label: "Growth", value: "High", judge: "산업 태동기" },
-                { label: "Volume", value: "Surge", judge: "매집 징후" }
+                { label: "Volatility", value: "Low", judge: "포트 안정성" },
+                { label: "Yield", value: "Steady", judge: "복리 효과 극대화" },
+                { label: "Growth", value: "Stable", judge: "퇴직연금 유입" }
             ]
         },
         competitor: {
-            name: "vs TIGER 글로벌AI로봇",
-            analysis: "국내 로봇 기업들의 주가 탄력성이 더 좋아 단기 수익률 유리."
+            name: "vs KODEX 삼성전자채권혼합",
+            analysis: "특정 종목(삼성전자) 쏠림 없이 증시 전반의 밸류업 기운을 넓게 흡수."
         },
-        flow: "투신권(사모펀드) 매수세 포착.",
+        flow: "퇴직연금(디폴트옵션) 및 연금저축 자금 지속 유입.",
         technical: {
-            trend: "장기 박스권 상단 돌파 시도",
-            indicators: ["Obv: 우상향", "Stochastics: 과매수권 진입", "Bollinger: 상단 확장"]
+            trend: "꾸준한 45도 우상향",
+            indicators: ["안정적인 채권 베이스", "주식 비중 탄력적 조절"]
         },
         scenarios: {
-            bull: { percent: "65%", target: "14,500원", desc: "박스권 돌파 시 강력한 숏커버링" },
-            bear: { percent: "35%", target: "11,200원", desc: "돌파 실패 시 실망 매물 출회" }
+            bull: { percent: "75%", target: "28,000원", desc: "증시 전반의 완만한 상승 시" },
+            bear: { percent: "25%", target: "23,000원", desc: "금리 인상 및 주식 시장 동반 충격 시" }
         },
         strategy: {
-            entry: "분할 매수 (눌림목 공략)",
-            goal: "16,000원",
-            stop: "10,800원"
+            entry: "매월 적립식 매수",
+            goal: "장기 보유 (연금 코어)",
+            stop: "모멘텀 붕괴 시 (하단 21,500원)"
         }
     }
 ];
