@@ -2,112 +2,51 @@ import type { RankingReport } from '../types';
 
 export const initialData: RankingReport = {
     date: '2026-02-26',
-    categories: [
-        {
-            categoryName: "국내 주식 (Domestic Stock)",
-            items: [
-                { rank: 1, name: "TIGER 증권", yield1M: "+57.0%", yield3M: "+106.5%", yield6M: "+137.5%", yield1Y: "+253.6%" },
-                { rank: 2, name: "KODEX 증권", yield1M: "+57.4%", yield3M: "+104.9%", yield6M: "+134.9%", yield1Y: "+292.2%" },
-                { rank: 3, name: "HANARO Fn K-반도체", yield1M: "+38.5%", yield3M: "+95.5%", yield6M: "+186.0%", yield1Y: "+236.0%" },
-                { rank: 4, name: "UNICORN SK하이닉스밸류체인액티브", yield1M: "+36.4%", yield3M: "+83.0%", yield6M: "+185.1%", yield1Y: "+220.9%" },
-                { rank: 5, name: "TIGER 200 IT", yield1M: "+32.1%", yield3M: "+85.0%", yield6M: "+175.4%", yield1Y: "+225.3%" },
-                { rank: 6, name: "TIGER 반도체TOP10", yield1M: "+30.6%", yield3M: "+89.0%", yield6M: "+170.5%", yield1Y: "+204.9%" },
-                { rank: 7, name: "TIGER 반도체", yield1M: "+33.4%", yield3M: "+84.1%", yield6M: "+163.1%", yield1Y: "+188.9%" },
-                { rank: 8, name: "KODEX 200IT TR", yield1M: "+31.1%", yield3M: "+84.2%", yield6M: "+176.5%", yield1Y: "+227.1%" },
-                { rank: 9, name: "ACE AI반도체포커스", yield1M: "+30.6%", yield3M: "+84.6%", yield6M: "+178.5%", yield1Y: "+205.5%" },
-                { rank: 10, name: "KODEX 반도체", yield1M: "+33.3%", yield3M: "+83.8%", yield6M: "+160.9%", yield1Y: "+185.5%" },
-                { rank: 11, name: "RISE 네트워크인프라", yield1M: "+34.0%", yield3M: "+76.8%", yield6M: "+169.8%", yield1Y: "+213.3%" },
-                { rank: 12, name: "WON 반도체밸류체인액티브", yield1M: "+33.8%", yield3M: "+75.1%", yield6M: "+164.0%", yield1Y: "+212.1%" },
-                { rank: 13, name: "BNK 온디바이스AI", yield1M: "+31.2%", yield3M: "+79.5%", yield6M: "+159.4%", yield1Y: "+168.9%" },
-                { rank: 14, name: "PLUS 글로벌HBM반도체", yield1M: "+18.8%", yield3M: "+89.2%", yield6M: "+209.4%", yield1Y: "+273.0%" },
-                { rank: 15, name: "RISE 대형고배당10TR", yield1M: "+27.4%", yield3M: "+85.7%", yield6M: "+162.0%", yield1Y: "+236.7%" },
-                { rank: 16, name: "KODEX IT", yield1M: "+29.6%", yield3M: "+75.3%", yield6M: "+151.9%", yield1Y: "+185.5%" },
-                { rank: 17, name: "TIGER 코리아TOP10", yield1M: "+26.2%", yield3M: "+81.6%", yield6M: "+154.4%", yield1Y: "+205.7%" },
-                { rank: 18, name: "KIWOOM K-반도체북미공급망", yield1M: "+34.3%", yield3M: "+68.5%", yield6M: "+123.4%", yield1Y: "+118.1%" },
-                { rank: 19, name: "DAISHIN343 AI반도체&인프라액티브", yield1M: "+32.0%", yield3M: "+70.8%", yield6M: "+130.1%", yield1Y: "+157.9%" },
-                { rank: 20, name: "KODEX AI반도체", yield1M: "+26.8%", yield3M: "+71.9%", yield6M: "+151.7%", yield1Y: "+196.4%" }
-            ]
-        },
-        {
-            categoryName: "채권 (Bond)",
-            items: [
-                { rank: 1, name: "KODEX 한중전기차(합성)", yield1M: "+7.2%", yield3M: "+28.7%", yield6M: "+58.5%", yield1Y: "+62.9%" },
-                { rank: 2, name: "TIGER 한중전기차(합성)", yield1M: "+6.4%", yield3M: "+27.4%", yield6M: "+57.8%", yield1Y: "+62.0%" },
-                { rank: 3, name: "SOL 한국형글로벌전기차&2차전지액티브", yield1M: "+3.9%", yield3M: "+18.9%", yield6M: "+29.8%", yield1Y: "+41.6%" },
-                { rank: 4, name: "RISE 글로벌리얼티인컴", yield1M: "+6.0%", yield3M: "+8.6%", yield6M: "+13.5%", yield1Y: "+11.1%" },
-                { rank: 5, name: "WON 한국부동산TOP3플러스", yield1M: "+3.1%", yield3M: "+7.8%", yield6M: "+11.2%", yield1Y: "+17.0%" },
-                { rank: 6, name: "TIGER 미국30년국채스트립액티브(합성 H)", yield1M: "+3.0%", yield3M: "+0.1%", yield6M: "+6.0%", yield1Y: "+0.3%" },
-                { rank: 7, name: "KODEX 미국30년국채액티브(H)", yield1M: "+2.3%", yield3M: "+0.9%", yield6M: "+5.1%", yield1Y: "+4.5%" },
-                { rank: 8, name: "KODEX 미국30년국채울트라선물(H)", yield1M: "+2.3%", yield3M: "+0.7%", yield6M: "+4.6%", yield1Y: "+3.9%" },
-                { rank: 9, name: "SOL 미국30년국채액티브(H)", yield1M: "+2.2%", yield3M: "+0.5%", yield6M: "+4.7%", yield1Y: "+3.7%" },
-                { rank: 10, name: "RISE 미국장기국채선물(H)", yield1M: "+2.1%", yield3M: "+1.0%", yield6M: "+4.0%", yield1Y: "+5.9%" },
-                { rank: 11, name: "ACE 미국30년국채액티브(H)", yield1M: "+2.1%", yield3M: "+0.6%", yield6M: "+4.6%", yield1Y: "+3.7%" },
-                { rank: 12, name: "TIGER 미국30년국채커버드콜액티브(H)", yield1M: "+2.0%", yield3M: "+0.7%", yield6M: "+4.5%", yield1Y: "+4.3%" },
-                { rank: 13, name: "KODEX 미국30년국채타겟커버드콜(합성 H)", yield1M: "+1.9%", yield3M: "+1.0%", yield6M: "+4.3%", yield1Y: "+4.1%" },
-                { rank: 14, name: "TIGER 미국투자등급회사채액티브(H)", yield1M: "+0.8%", yield3M: "+1.3%", yield6M: "+3.0%", yield1Y: "+6.6%" },
-                { rank: 15, name: "SOL 미국30년국채커버드콜(합성)", yield1M: "+0.1%", yield3M: "-0.6%", yield6M: "+10.9%", yield1Y: "+9.8%" }
-            ]
-        },
-        {
-            categoryName: "금/원자재 (Gold/Commodity)",
-            items: [
-                { rank: 1, name: "KODEX 은선물(H)", yield1M: "-10.3%", yield3M: "+78.6%", yield6M: "+129.0%", yield1Y: "+157.3%" },
-                { rank: 2, name: "TIGER 금은선물(H)", yield1M: "+2.2%", yield3M: "+31.3%", yield6M: "+57.9%", yield1Y: "+73.9%" },
-                { rank: 3, name: "KODEX 골드선물(H)", yield1M: "+4.0%", yield3M: "+27.0%", yield6M: "+51.8%", yield1Y: "+69.1%" },
-                { rank: 4, name: "PLUS 글로벌희토류&전략자원생산기업", yield1M: "-2.0%", yield3M: "+37.5%", yield6M: "+64.2%", yield1Y: "+122.6%" },
-                { rank: 5, name: "ACE KRX금현물", yield1M: "+1.8%", yield3M: "+23.7%", yield6M: "+59.1%", yield1Y: "+44.9%" },
-                { rank: 6, name: "TIGER 원유선물Enhanced(H)", yield1M: "+10.2%", yield3M: "+14.4%", yield6M: "+8.3%", yield1Y: "+1.2%" },
-                { rank: 7, name: "KODEX WTI원유선물(H)", yield1M: "+10.3%", yield3M: "+14.0%", yield6M: "+8.0%", yield1Y: "+2.4%" },
-                { rank: 8, name: "RISE 팔라듐선물(H)", yield1M: "-5.7%", yield3M: "+30.9%", yield6M: "+56.1%", yield1Y: "+72.3%" },
-                { rank: 9, name: "[주의] KODEX 구리선물(H)", yield1M: "+1.6%", yield3M: "+17.7%", yield6M: "+29.4%", yield1Y: "+17.9%" },
-                { rank: 10, name: "[주의] TIGER 구리실물", yield1M: "-1.5%", yield3M: "+18.8%", yield6M: "+35.1%", yield1Y: "+27.6%" },
-                { rank: 11, name: "KODEX 콩선물(H)", yield1M: "+8.0%", yield3M: "+1.1%", yield6M: "+7.0%", yield1Y: "+7.5%" },
-                { rank: 12, name: "KODEX 3대농산물선물(H)", yield1M: "+5.3%", yield3M: "+0.8%", yield6M: "+4.7%", yield1Y: "-10.5%" },
-                { rank: 13, name: "TIGER 농산물선물Enhanced(H)", yield1M: "+3.4%", yield3M: "+0.5%", yield6M: "+1.3%", yield1Y: "-10.8%" }
-            ]
-        },
-        {
-            categoryName: "부동산 (Real Estate)",
-            items: [
-                { rank: 1, name: "RISE 글로벌데이터센터리츠(합성)", yield1M: "+6.2%", yield3M: "+12.8%", yield6M: "+20.1%", yield1Y: "+18.4%" },
-                { rank: 2, name: "TIGER 미국MSCI리츠(합성 H)", yield1M: "+7.5%", yield3M: "+9.7%", yield6M: "+13.2%", yield1Y: "+7.5%" },
-                { rank: 3, name: "KODEX 미국부동산리츠(H)", yield1M: "+5.2%", yield3M: "+7.8%", yield6M: "+7.6%", yield1Y: "+5.4%" },
-                { rank: 4, name: "ACE 미국부동산리츠(합성 H)", yield1M: "+5.2%", yield3M: "+7.5%", yield6M: "+7.4%", yield1Y: "+5.4%" },
-                { rank: 5, name: "TIGER 리츠부동산인프라", yield1M: "+2.5%", yield3M: "+7.5%", yield6M: "+14.0%", yield1Y: "+22.7%" },
-                { rank: 6, name: "TIGER 리츠부동산인프라채권", yield1M: "+2.5%", yield3M: "+5.6%", yield6M: "+9.2%", yield1Y: "+15.9%" },
-                { rank: 7, name: "PLUS K리츠", yield1M: "+0.8%", yield3M: "+5.7%", yield6M: "+11.9%", yield1Y: "+20.6%" },
-                { rank: 8, name: "KODEX 한국부동산리츠인프라", yield1M: "+0.9%", yield3M: "+4.6%", yield6M: "+9.8%", yield1Y: "+16.7%" },
-                { rank: 9, name: "[주의] ACE 싱가포르리츠", yield1M: "-0.7%", yield3M: "+4.1%", yield6M: "+16.6%", yield1Y: "+27.0%" },
-                { rank: 10, name: "KODEX 일본부동산리츠(H)", yield1M: "+1.4%", yield3M: "+2.2%", yield6M: "+7.6%", yield1Y: "+26.2%" }
-            ]
-        },
-        {
-            categoryName: "혼합자산 (Mixed Asset)",
-            items: [
-                { rank: 1, name: "RISE 주식혼합", yield1M: "+18.4%", yield3M: "+23.8%", yield6M: "+54.2%", yield1Y: "+85.9%" },
-                { rank: 2, name: "RISE 삼성그룹Top3채권혼합", yield1M: "+11.2%", yield3M: "+13.5%", yield6M: "+30.2%", yield1Y: "+36.3%" },
-                { rank: 3, name: "KODEX 삼성전자채권혼합", yield1M: "+10.0%", yield3M: "+15.9%", yield6M: "+32.1%", yield1Y: "+42.9%" },
-                { rank: 4, name: "RISE 채권혼합", yield1M: "+9.9%", yield3M: "+12.8%", yield6M: "+25.6%", yield1Y: "+37.1%" },
-                { rank: 5, name: "KODEX 200미국채혼합", yield1M: "+8.9%", yield3M: "+11.1%", yield6M: "+31.0%", yield1Y: "+44.6%" },
-                { rank: 6, name: "RISE V&S셀렉트밸류채권혼합", yield1M: "+7.8%", yield3M: "+10.3%", yield6M: "+20.5%", yield1Y: "+32.5%" },
-                { rank: 7, name: "PLUS 고배당주채권혼합", yield1M: "+6.3%", yield3M: "+10.4%", yield6M: "+12.1%", yield1Y: "+28.1%" },
-                { rank: 8, name: "KODEX 코리아배당성장채권혼합", yield1M: "+5.7%", yield3M: "+6.5%", yield6M: "+8.9%", yield1Y: "+19.9%" },
-                { rank: 9, name: "RISE 글로벌자산배분액티브", yield1M: "+3.0%", yield3M: "+4.2%", yield6M: "+13.6%", yield1Y: "+17.6%" },
-                { rank: 10, name: "KODEX 멀티에셋하이인컴(H)", yield1M: "+3.6%", yield3M: "+4.9%", yield6M: "+7.7%", yield1Y: "+16.0%" },
-                { rank: 11, name: "KIWOOM TDF2050액티브", yield1M: "+2.7%", yield3M: "+2.7%", yield6M: "+15.5%", yield1Y: "+18.9%" },
-                { rank: 12, name: "PLUS 스마트베타Quality채권혼합", yield1M: "+3.2%", yield3M: "+4.1%", yield6M: "+7.7%", yield1Y: "+17.0%" },
-                { rank: 13, name: "KIWOOM TDF2040액티브", yield1M: "+2.5%", yield3M: "+2.4%", yield6M: "+14.3%", yield1Y: "+17.0%" },
-                { rank: 14, name: "TIGER 경기방어채권혼합", yield1M: "+3.2%", yield3M: "+4.6%", yield6M: "+5.5%", yield1Y: "+11.9%" },
-                { rank: 15, name: "RISE 헬스케어채권혼합", yield1M: "+2.7%", yield3M: "+4.7%", yield6M: "+7.6%", yield1Y: "+10.1%" }
-            ]
-        },
-        {
-            categoryName: "통화/기타 (Currency/Other)",
-            items: [
-                { rank: 1, name: "TIGER 일본엔선물", yield1M: "+0.2%", yield3M: "-1.1%", yield6M: "-0.4%", yield1Y: "-2.3%" },
-                { rank: 2, name: "[주의] KODEX 미국달러선물", yield1M: "-1.6%", yield3M: "+0.1%", yield6M: "+6.0%", yield1Y: "+4.0%" },
-                { rank: 3, name: "[주의] KIWOOM 미국달러선물", yield1M: "-1.7%", yield3M: "-", yield6M: "+6.0%", yield1Y: "+3.8%" }
-            ]
-        }
+    items: [
+        { rank: 1, rankChange: "▲ 2", name: "TIGER 반도체TOP10레버리지", closePrice: "41,360", changeRate: "6.30%", momentumScore: "4048.22", yield1W: "16.70%", yield2W: "21.65%", yield1M: "60.90%", yield3M: "218.40%" },
+        { rank: 2, rankChange: "▲ 2", name: "KODEX 레버리지", closePrice: "100,005", changeRate: "5.05%", momentumScore: "3375.48", yield1W: "18.19%", yield2W: "28.62%", yield1M: "46.18%", yield3M: "161.55%" },
+        { rank: 3, rankChange: "▲ 4", name: "TIGER 200선물레버리지", closePrice: "75,950", changeRate: "5.08%", momentumScore: "3356.48", yield1W: "18.12%", yield2W: "28.70%", yield1M: "46.02%", yield3M: "159.22%" },
+        { rank: 4, rankChange: "▲ 1", name: "TIGER 레버리지", closePrice: "98,820", changeRate: "4.89%", momentumScore: "3347.73", yield1W: "17.94%", yield2W: "28.54%", yield1M: "46.10%", yield3M: "159.37%" },
+        { rank: 5, rankChange: "▲ 1", name: "ACE 레버리지", closePrice: "40,445", changeRate: "4.87%", momentumScore: "3334.86", yield1W: "17.98%", yield2W: "28.56%", yield1M: "45.93%", yield3M: "157.53%" },
+        { rank: 6, rankChange: "▲ 11", name: "HANARO Fn K-반도체", closePrice: "33,795", changeRate: "3.48%", momentumScore: "2233.41", yield1W: "13.77%", yield2W: "16.72%", yield1M: "36.46%", yield3M: "89.70%" },
+        { rank: 7, rankChange: "▲ 30", name: "RISE 네트워크인프라", closePrice: "33,650", changeRate: "4.10%", momentumScore: "2226.88", yield1W: "16.28%", yield2W: "18.69%", yield1M: "31.21%", yield3M: "71.60%" },
+        { rank: 8, rankChange: "▼ 7", name: "KODEX 증권", closePrice: "28,650", changeRate: "-2.25%", momentumScore: "2128.85", yield1W: "7.65%", yield2W: "19.97%", yield1M: "52.68%", yield3M: "96.77%" },
+        { rank: 9, rankChange: "▲ 75", name: "TIGER 2차전지TOP10레버리지", closePrice: "1,993", changeRate: "9.81%", momentumScore: "2054.82", yield1W: "19.77%", yield2W: "21.23%", yield1M: "23.18%", yield3M: "44.73%" },
+        { rank: 10, rankChange: "(New)", name: "WON 반도체밸류체인액티브", closePrice: "29,605", changeRate: "5.56%", momentumScore: "2035.72", yield1W: "13.19%", yield2W: "15.42%", yield1M: "33.81%", yield3M: "72.93%" },
+        { rank: 11, rankChange: "▲ 7", name: "TIGER 코리아원자력", closePrice: "18,550", changeRate: "0.98%", momentumScore: "2030.66", yield1W: "14.22%", yield2W: "19.56%", yield1M: "28.28%", yield3M: "91.53%" },
+        { rank: 12, rankChange: "▼ 10", name: "TIGER 증권", closePrice: "19,570", changeRate: "-2.69%", momentumScore: "2023.51", yield1W: "6.36%", yield2W: "18.82%", yield1M: "51.29%", yield3M: "96.68%" },
+        { rank: 13, rankChange: "▲ 34", name: "TIGER 200 IT", closePrice: "86,620", changeRate: "4.49%", momentumScore: "1990.48", yield1W: "12.69%", yield2W: "16.28%", yield1M: "27.78%", yield3M: "77.99%" },
+        { rank: 14, rankChange: "▼ 4", name: "KODEX 코스닥150레버리지", closePrice: "18,715", changeRate: "1.82%", momentumScore: "1897.39", yield1W: "12.33%", yield2W: "10.45%", yield1M: "42.70%", yield3M: "75.73%" },
+        { rank: 15, rankChange: "▼ 3", name: "TIGER 코스닥150 레버리지", closePrice: "20,800", changeRate: "1.76%", momentumScore: "1891.09", yield1W: "12.49%", yield2W: "10.58%", yield1M: "42.42%", yield3M: "73.62%" },
+        { rank: 16, rankChange: "▲ 22", name: "KODEX 2차전지산업레버리지", closePrice: "2,170", changeRate: "8.88%", momentumScore: "1858.78", yield1W: "17.11%", yield2W: "15.06%", yield1M: "23.65%", yield3M: "53.36%" },
+        { rank: 17, rankChange: "▲ 92", name: "KODEX AI전력핵심설비", closePrice: "33,725", changeRate: "1.64%", momentumScore: "1773.97", yield1W: "13.04%", yield2W: "16.66%", yield1M: "26.36%", yield3M: "51.23%" },
+        { rank: 18, rankChange: "▲ 10", name: "SOL 한국형원자력SMR", closePrice: "17,815", changeRate: "0.14%", momentumScore: "1765.91", yield1W: "12.61%", yield2W: "16.90%", yield1M: "24.49%", yield3M: "76.04%" },
+        { rank: 19, rankChange: "▲ 17", name: "ACE AI반도체포커스", closePrice: "42,210", changeRate: "3.56%", momentumScore: "1738.42", yield1W: "8.54%", yield2W: "12.41%", yield1M: "28.87%", yield3M: "81.20%" },
+        { rank: 20, rankChange: "▲ 70", name: "RISE 비메모리반도체액티브", closePrice: "22,270", changeRate: "3.34%", momentumScore: "1690.52", yield1W: "11.77%", yield2W: "14.18%", yield1M: "32.60%", yield3M: "47.05%" },
+        { rank: 21, rankChange: "▲ 45", name: "TIGER 코리아테크액티브", closePrice: "24,770", changeRate: "4.32%", momentumScore: "1680.14", yield1W: "11.55%", yield2W: "13.31%", yield1M: "27.71%", yield3M: "51.73%" },
+        { rank: 22, rankChange: "▲ 11", name: "TIGER 반도체TOP10", closePrice: "31,600", changeRate: "3.17%", momentumScore: "1672.06", yield1W: "7.78%", yield2W: "10.55%", yield1M: "29.24%", yield3M: "86.65%" },
+        { rank: 23, rankChange: "▲ 16", name: "RISE 대형고배당10TR", closePrice: "61,000", changeRate: "2.87%", momentumScore: "1671.73", yield1W: "8.33%", yield2W: "14.26%", yield1M: "24.12%", yield3M: "80.74%" },
+        { rank: 24, rankChange: "▲ 2", name: "KODEX 반도체", closePrice: "95,695", changeRate: "3.58%", momentumScore: "1670.08", yield1W: "7.83%", yield2W: "10.37%", yield1M: "32.54%", yield3M: "81.00%" },
+        { rank: 25, rankChange: "▲ 5", name: "TIGER 반도체", closePrice: "100,265", changeRate: "3.32%", momentumScore: "1668.30", yield1W: "7.88%", yield2W: "10.13%", yield1M: "32.23%", yield3M: "81.92%" },
+        { rank: 26, rankChange: "▲ 18", name: "TIGER 코리아TOP10", closePrice: "32,170", changeRate: "3.01%", momentumScore: "1663.07", yield1W: "9.22%", yield2W: "13.88%", yield1M: "23.26%", yield3M: "77.44%" },
+        { rank: 27, rankChange: "▼ 8", name: "PLUS 글로벌HBM반도체", closePrice: "63,930", changeRate: "3.14%", momentumScore: "1662.81", yield1W: "7.52%", yield2W: "12.91%", yield1M: "18.29%", yield3M: "84.80%" },
+        { rank: 28, rankChange: "▲ 14", name: "RISE ESG사회책임투자", closePrice: "35,755", changeRate: "3.10%", momentumScore: "1614.82", yield1W: "9.39%", yield2W: "13.94%", yield1M: "24.28%", yield3M: "69.98%" },
+        { rank: 29, rankChange: "▲ 12", name: "ACE 원자력TOP10", closePrice: "64,650", changeRate: "1.22%", momentumScore: "1614.37", yield1W: "11.65%", yield2W: "13.55%", yield1M: "20.83%", yield3M: "70.56%" },
+        { rank: 30, rankChange: "▲ 19", name: "KODEX 건설", closePrice: "6,505", changeRate: "3.75%", momentumScore: "1609.50", yield1W: "11.77%", yield2W: "12.93%", yield1M: "26.80%", yield3M: "73.70%" },
+        { rank: 31, rankChange: "(New)", name: "KODEX MSCI Korea TR", closePrice: "30,950", changeRate: "2.52%", momentumScore: "1539.99", yield1W: "8.94%", yield2W: "14.08%", yield1M: "22.82%", yield3M: "66.71%" },
+        { rank: 32, rankChange: "▲ 19", name: "TIGER 200 건설", closePrice: "7,330", changeRate: "2.09%", momentumScore: "1515.53", yield1W: "10.39%", yield2W: "13.47%", yield1M: "22.99%", yield3M: "70.07%" },
+        { rank: 33, rankChange: "▲ 13", name: "KODEX 코스피100", closePrice: "70,545", changeRate: "2.64%", momentumScore: "1513.21", yield1W: "8.82%", yield2W: "13.78%", yield1M: "22.36%", yield3M: "66.13%" },
+        { rank: 34, rankChange: "▼ 21", name: "PLUS 태양광&ESS", closePrice: "32,315", changeRate: "2.33%", momentumScore: "1500.38", yield1W: "8.51%", yield2W: "9.86%", yield1M: "35.83%", yield3M: "58.10%" },
+        { rank: 35, rankChange: "▲ 23", name: "SOL 200TR", closePrice: "33,270", changeRate: "2.56%", momentumScore: "1494.42", yield1W: "8.80%", yield2W: "13.74%", yield1M: "22.27%", yield3M: "64.54%" },
+        { rank: 36, rankChange: "▲ 17", name: "RISE 200TR", closePrice: "50,390", changeRate: "2.49%", momentumScore: "1490.82", yield1W: "8.81%", yield2W: "13.58%", yield1M: "22.22%", yield3M: "64.57%" },
+        { rank: 37, rankChange: "▲ 24", name: "ACE 200", closePrice: "89,620", changeRate: "2.43%", momentumScore: "1490.66", yield1W: "8.88%", yield2W: "13.62%", yield1M: "22.01%", yield3M: "64.50%" },
+        { rank: 38, rankChange: "▲ 14", name: "KIWOOM 200TR", closePrice: "116,155", changeRate: "2.43%", momentumScore: "1487.76", yield1W: "8.78%", yield2W: "13.61%", yield1M: "22.16%", yield3M: "64.34%" },
+        { rank: 39, rankChange: "▲ 18", name: "1Q 200액티브", closePrice: "28,840", changeRate: "2.52%", momentumScore: "1486.91", yield1W: "8.97%", yield2W: "13.86%", yield1M: "21.51%", yield3M: "63.26%" },
+        { rank: 40, rankChange: "▲ 16", name: "KODEX 200TR", closePrice: "32,045", changeRate: "2.45%", momentumScore: "1486.71", yield1W: "8.76%", yield2W: "13.57%", yield1M: "22.12%", yield3M: "64.54%" },
+        { rank: 41, rankChange: "▲ 14", name: "KODEX 200", closePrice: "89,085", changeRate: "2.47%", momentumScore: "1485.50", yield1W: "8.83%", yield2W: "13.58%", yield1M: "21.99%", yield3M: "64.33%" },
+        { rank: 42, rankChange: "▲ 22", name: "RISE 200", closePrice: "89,810", changeRate: "2.46%", momentumScore: "1485.33", yield1W: "8.79%", yield2W: "13.65%", yield1M: "21.91%", yield3M: "64.41%" },
+        { rank: 43, rankChange: "(New)", name: "ACE 200TR", closePrice: "59,650", changeRate: "2.36%", momentumScore: "1484.74", yield1W: "8.75%", yield2W: "13.54%", yield1M: "22.12%", yield3M: "64.39%" },
+        { rank: 44, rankChange: "▲ 18", name: "PLUS 200", closePrice: "90,535", changeRate: "2.46%", momentumScore: "1482.41", yield1W: "8.80%", yield2W: "13.59%", yield1M: "21.93%", yield3M: "64.01%" },
+        { rank: 45, rankChange: "▲ 14", name: "TIGER 200", closePrice: "89,030", changeRate: "2.45%", momentumScore: "1480.37", yield1W: "8.79%", yield2W: "13.57%", yield1M: "21.83%", yield3M: "64.10%" }
     ]
 };

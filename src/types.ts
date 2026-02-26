@@ -1,19 +1,17 @@
 export interface ETFData {
   rank: number;
+  rankChange: string;
   name: string;
+  closePrice: string;
+  changeRate: string;
+  momentumScore: string;
   yield1W: string;
+  yield2W: string;
   yield1M: string;
   yield3M: string;
-  yield6M: string;
-  yield1Y?: string;
-}
-
-export interface CategoryData {
-  categoryName: string;
-  items: ETFData[];
 }
 
 export interface RankingReport {
   date: string;
-  categories: CategoryData[];
+  items: ETFData[];
 }
