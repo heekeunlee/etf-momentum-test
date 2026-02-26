@@ -18,9 +18,8 @@ export const Home: React.FC = () => {
         <div className="container" style={{ paddingBottom: '4rem', maxWidth: '1000px' }}>
             <div className="header-section">
                 <div>
-                    <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#1E293B' }}>
-                        ETF 종목별 수익률 랭킹 <br />
-                        <span style={{ fontSize: '1rem', fontWeight: 500, color: '#64748B' }}>(주간, 1개월, 3개월, 6개월)</span>
+                    <h2 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#1E293B' }}>
+                        ETF 상승/하락 모멘텀 랭킹
                     </h2>
 
                 </div>
@@ -32,6 +31,7 @@ export const Home: React.FC = () => {
                     <VisitorCounter />
                 </div>
             </div>
+
 
             <div className="flex flex-col gap-4">
                 {data.categories.map((cat, idx) => (
@@ -47,10 +47,10 @@ export const Home: React.FC = () => {
                                     <tr>
                                         <th className="th-rank">Rank</th>
                                         <th className="th-name">ETF Name</th>
-                                        <th className="th-data">1 Week</th>
-                                        <th className="th-data">1 Month</th>
-                                        <th className="th-data">3 Month</th>
-                                        <th className="th-data">6 Month</th>
+                                        <th className="th-data">1개월</th>
+                                        <th className="th-data">3개월</th>
+                                        <th className="th-data">6개월</th>
+                                        <th className="th-data">1년</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -65,14 +65,14 @@ export const Home: React.FC = () => {
                                                 {item.name}
                                                 {item.rank === 1 && <Trophy size={14} className="trophy-icon" />}
                                             </td>
-                                            {['yield1W', 'yield1M', 'yield3M', 'yield6M'].map((key) => {
+                                            {['yield1M', 'yield3M', 'yield6M', 'yield1Y'].map((key) => {
                                                 const val = item[key as keyof typeof item] as string;
                                                 const trend = checkTrend(val);
                                                 const labelMap: Record<string, string> = {
-                                                    yield1W: '1 Week',
-                                                    yield1M: '1 Month',
-                                                    yield3M: '3 Month',
-                                                    yield6M: '6 Month'
+                                                    yield1M: '1개월',
+                                                    yield3M: '3개월',
+                                                    yield6M: '6개월',
+                                                    yield1Y: '1년'
                                                 };
                                                 return (
                                                     <td key={key} className={`td-data text-${trend}`} data-label={labelMap[key]}>
