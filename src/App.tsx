@@ -19,7 +19,7 @@ function App() {
   };
 
   // Flatten data for the report
-  const allRankings = initialData.categories.flatMap(cat => cat.items).sort((a, b) => a.rank - b.rank);
+  const allRankings = initialData.upItems ? [...initialData.upItems, ...initialData.downItems].sort((a, b) => a.rank - b.rank) : [];
 
   return (
     <Router basename="/etf-momentum-test">

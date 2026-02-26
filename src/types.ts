@@ -19,5 +19,6 @@ export interface ETFData {
 
 export interface RankingReport {
   date: string;
-  items: ETFData[];
+  upItems: ETFData[];
+  downItems: ETFData[];
 }
