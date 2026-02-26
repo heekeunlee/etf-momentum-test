@@ -8,9 +8,11 @@ export const Home: React.FC = () => {
     const [data] = useState<RankingReport>(initialData);
 
     const checkTrend = (val: string) => {
-        if (!val) return 'neutral';
-        if (val.includes('+')) return 'up';
-        if (val.includes('-')) return 'down';
+        if (!val || val === '-') return 'neutral';
+        // Remove commas before parsing to number
+        const numVal = parseFloat(val.replace(/,/g, ''));
+        if (numVal > 0 || val.includes('+') || val.includes('▲')) return 'up';
+        if (numVal < 0 || val.includes('-') || val.includes('▼')) return 'down';
         return 'neutral';
     };
 
