@@ -3,7 +3,13 @@ export interface ETFData {
   rankChange: string;
   name: string;
   closePrice: string;
+  diffPrev: string;
   changeRate: string;
+  nav: string;
+  volume: string;
+  tradingValue: string;
+  marketCap: string;
+  baseDate: string;
   momentumScore: string;
   yield1W: string;
   yield2W: string;
