@@ -43,20 +43,20 @@ export const Home: React.FC = () => {
                                 <tr>
                                     <th className="th-rank">현재 순위</th>
                                     <th className="th-name" style={{ textAlign: 'center' }}>순위 변동</th>
-                                    <th className="th-name">종목명</th>
-                                    <th className="th-data">종가</th>
-                                    <th className="th-data">전일대비</th>
-                                    <th className="th-data">등락률 (%)</th>
-                                    <th className="th-data">NAV</th>
-                                    <th className="th-data">거래량 (만주)</th>
-                                    <th className="th-data">거래대금 (억원)</th>
-                                    <th className="th-data">시가총액 (억원)</th>
-                                    <th className="th-data">기준일</th>
-                                    <th className="th-data">모멘텀 점수</th>
-                                    <th className="th-data">1주 수익률</th>
-                                    <th className="th-data">2주 수익률</th>
-                                    <th className="th-data">1개월 수익률</th>
-                                    <th className="th-data">3개월 수익률</th>
+                                    <th className="th-name" style={{ textAlign: 'center' }}>종목명</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>종가</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>전일대비</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>등락률 (%)</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>1주 수익률</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>2주 수익률</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>1개월 수익률</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>3개월 수익률</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>NAV</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>거래량 (만주)</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>거래대금 (억원)</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>시가총액 (억원)</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>기준일</th>
+                                    <th className="th-data" style={{ textAlign: 'center' }}>모멘텀 점수</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -85,14 +85,6 @@ export const Home: React.FC = () => {
                                         <td className={`td-data text-${checkTrend(item.changeRate)}`} data-label="등락률 (%)">
                                             {item.changeRate}
                                         </td>
-                                        <td className="td-data" data-label="NAV">{item.nav}</td>
-                                        <td className="td-data" data-label="거래량 (만주)">{item.volume}</td>
-                                        <td className="td-data" data-label="거래대금 (억원)">{item.tradingValue}</td>
-                                        <td className="td-data" data-label="시가총액 (억원)">{item.marketCap}</td>
-                                        <td className="td-data" data-label="기준일">{item.baseDate}</td>
-                                        <td className="td-data font-medium text-purple-600" data-label="모멘텀 점수">
-                                            {item.momentumScore}
-                                        </td>
                                         {['yield1W', 'yield2W', 'yield1M', 'yield3M'].map((key) => {
                                             const val = item[key as keyof typeof item] as string;
                                             const trend = checkTrend(val);
@@ -108,6 +100,14 @@ export const Home: React.FC = () => {
                                                 </td>
                                             );
                                         })}
+                                        <td className="td-data" data-label="NAV">{item.nav}</td>
+                                        <td className="td-data" data-label="거래량 (만주)">{item.volume}</td>
+                                        <td className="td-data" data-label="거래대금 (억원)">{item.tradingValue}</td>
+                                        <td className="td-data" data-label="시가총액 (억원)">{item.marketCap}</td>
+                                        <td className="td-data" data-label="기준일">{item.baseDate}</td>
+                                        <td className="td-data font-medium text-purple-600" data-label="모멘텀 점수">
+                                            {item.momentumScore}
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
