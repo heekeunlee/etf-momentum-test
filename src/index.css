@@ -309,11 +309,6 @@ body {
     height: 18px;
   }
 
-  .tiny-col {
-    font-size: 0.14rem !important;
-    /* ~ 40% of 0.36rem */
-  }
-
   .data-table thead th {
     position: sticky;
     top: 0;
