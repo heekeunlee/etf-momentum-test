@@ -303,10 +303,15 @@ body {
   .data-table th,
   .data-table td {
     padding: 0.1rem 0.05rem;
-    font-size: 0.22rem;
+    font-size: 0.36rem;
     letter-spacing: -0.6px;
     white-space: nowrap;
     height: 18px;
+  }
+
+  .tiny-col {
+    font-size: 0.14rem !important;
+    /* ~ 40% of 0.36rem */
   }
 
   .data-table thead th {
