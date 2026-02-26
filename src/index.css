@@ -301,14 +301,14 @@ body {
 
   .data-table th,
   .data-table td {
-    padding: 0.15rem 0.2rem;
+    padding: 0.1rem 0.05rem;
     /* Extremely tight padding */
-    font-size: 0.55rem;
-    /* ~9px */
-    letter-spacing: -0.5px;
+    font-size: 0.45rem;
+    /* ~7px */
+    letter-spacing: -0.6px;
     /* Squeeze text */
     white-space: nowrap;
-    height: 24px;
+    height: 20px;
   }
 
   .th-rank,
@@ -319,7 +319,7 @@ body {
   .th-name,
   .td-name {
     font-weight: 600;
-    max-width: 65px;
+    max-width: 45px;
     /* Truncate extremely long names so columns fit */
     overflow: hidden;
     text-overflow: ellipsis;
