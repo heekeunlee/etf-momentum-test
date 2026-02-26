@@ -65,7 +65,7 @@ export const Home: React.FC = () => {
                                                 {item.rank}
                                             </div>
                                         </td>
-                                        <td className="td-name" style={{ textAlign: 'center', fontSize: '0.85rem' }}>
+                                        <td className="td-name" style={{ textAlign: 'center' }}>
                                             <span style={{
                                                 color: item.rankChange.includes('▲') ? '#ef4444' :
                                                     item.rankChange.includes('▼') ? '#3b82f6' : '#64748b',
