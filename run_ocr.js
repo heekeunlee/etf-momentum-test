@@ -2,7 +2,7 @@
 import Tesseract from 'tesseract.js';
 import fs from 'fs';
 
-const slices = ['slice_0.jpg', 'slice_4000.jpg', 'slice_8000.jpg'];
+const slices = ['enhanced_slice_5.png', 'enhanced_slice_6.png'];
 
 async function processImages() {
     console.log('Starting OCR...');
